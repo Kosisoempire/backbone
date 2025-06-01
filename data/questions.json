@@ -1,0 +1,100 @@
+[
+  {
+    "id": "1747834311490",
+    "question": "What is the Unit of Energy ?",
+    "options": [
+      "pascal",
+      "joules",
+      "watts",
+      "newton"
+    ],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:31:51.490Z"
+  },
+  {
+    "id": "1747834716851",
+    "question": "What is the unit of force ?",
+    "options": [
+      "Ampere",
+      "Volts",
+      "Joules",
+      "Newton"
+    ],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:38:36.851Z"
+  },
+  {
+    "id": "1747834762319",
+    "question": "what is the unit of work",
+    "options": [
+      "energy",
+      "joules",
+      "pascal",
+      "watts"
+    ],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:39:22.319Z",
+    "updatedAt": "2025-05-21T13:39:41.314Z"
+  },
+  {
+    "id": "1747834825021",
+    "question": "what is the unit of time ?",
+    "options": [
+      "Second",
+      "Minute",
+      "Hour",
+      "Day"
+    ],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:40:25.021Z"
+  },
+  {
+    "id": "1747834867328",
+    "question": "what is the unit of current ?",
+    "options": [
+      "Ampere",
+      "Watts",
+      "Voltage",
+      "Kilowatt"
+    ],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:41:07.328Z"
+  },
+  {
+    "id": "1747834924721",
+    "question": "what is the unit of mass",
+    "options": [
+      "kilogram",
+      "gram",
+      "mole",
+      "newton"
+    ],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:42:04.721Z"
+  },
+  {
+    "id": "1747834967489",
+    "question": "what is the unit of speed ?",
+    "options": [
+      "m/h",
+      "m/s",
+      "km/h",
+      "km/s"
+    ],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:42:47.489Z"
+  },
+  {
+    "id": "1747835053359",
+    "question": "what is the unit for absolute Temperature ?",
+    "options": [
+      "Degree Celcius",
+      "Kelvin",
+      "Fahrenheit",
+      "energy"
+    ],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.359Z",
+    "updatedAt": "2025-05-21T13:44:56.747Z"
+  }
+]

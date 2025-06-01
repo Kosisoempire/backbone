@@ -1,0 +1,30 @@
+[
+  {
+    "regNumber": "EBSU/2023/001",
+    "score": 5,
+    "total": 5,
+    "department": "industrial physics ",
+    "timestamp": "2025-05-21T13:46:37.150Z"
+  },
+  {
+    "regNumber": "EBSU/2023/002",
+    "score": 3,
+    "total": 5,
+    "department": "biochemistry",
+    "timestamp": "2025-05-21T15:11:14.958Z"
+  },
+  {
+    "regNumber": "EBSU/2023/003",
+    "score": 4,
+    "total": 5,
+    "department": "biochemistry",
+    "timestamp": "2025-05-25T21:40:33.453Z"
+  },
+  {
+    "regNumber": "EBSU/2023/006",
+    "score": 3,
+    "total": 5,
+    "department": "biochemistry",
+    "timestamp": "2025-05-27T07:57:53.870Z"
+  }
+]
