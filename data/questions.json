@@ -2,36 +2,21 @@
   {
     "id": "1747834311490",
     "question": "What is the Unit of Energy ?",
-    "options": [
-      "pascal",
-      "joules",
-      "watts",
-      "newton"
-    ],
+    "options": ["pascal", "joules", "watts", "newton"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:31:51.490Z"
   },
   {
     "id": "1747834716851",
     "question": "What is the unit of force ?",
-    "options": [
-      "Ampere",
-      "Volts",
-      "Joules",
-      "Newton"
-    ],
+    "options": ["Ampere", "Volts", "Joules", "Newton"],
     "correctAnswer": 3,
     "createdAt": "2025-05-21T13:38:36.851Z"
   },
   {
     "id": "1747834762319",
     "question": "what is the unit of work",
-    "options": [
-      "energy",
-      "joules",
-      "pascal",
-      "watts"
-    ],
+    "options": ["energy", "joules", "pascal", "watts"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:39:22.319Z",
     "updatedAt": "2025-05-21T13:39:41.314Z"
@@ -39,62 +24,532 @@
   {
     "id": "1747834825021",
     "question": "what is the unit of time ?",
-    "options": [
-      "Second",
-      "Minute",
-      "Hour",
-      "Day"
-    ],
+    "options": ["Second", "Minute", "Hour", "Day"],
     "correctAnswer": 0,
     "createdAt": "2025-05-21T13:40:25.021Z"
   },
   {
     "id": "1747834867328",
     "question": "what is the unit of current ?",
-    "options": [
-      "Ampere",
-      "Watts",
-      "Voltage",
-      "Kilowatt"
-    ],
+    "options": ["Ampere", "Watts", "Voltage", "Kilowatt"],
     "correctAnswer": 0,
     "createdAt": "2025-05-21T13:41:07.328Z"
   },
   {
     "id": "1747834924721",
     "question": "what is the unit of mass",
-    "options": [
-      "kilogram",
-      "gram",
-      "mole",
-      "newton"
-    ],
+    "options": ["kilogram", "gram", "mole", "newton"],
     "correctAnswer": 0,
     "createdAt": "2025-05-21T13:42:04.721Z"
   },
   {
     "id": "1747834967489",
     "question": "what is the unit of speed ?",
-    "options": [
-      "m/h",
-      "m/s",
-      "km/h",
-      "km/s"
-    ],
+    "options": ["m/h", "m/s", "km/h", "km/s"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:42:47.489Z"
   },
   {
     "id": "1747835053359",
     "question": "what is the unit for absolute Temperature ?",
-    "options": [
-      "Degree Celcius",
-      "Kelvin",
-      "Fahrenheit",
-      "energy"
-    ],
+    "options": ["Degree Celcius", "Kelvin", "Fahrenheit", "energy"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.359Z",
     "updatedAt": "2025-05-21T13:44:56.747Z"
+  },
+  {
+    "id": "1747835053360",
+    "question": "What is the dimensional formula of force?",
+    "options": ["MLT²", "MLT⁻²", "ML²T⁻²", "M⁻¹L⁻¹T⁻²"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.360Z"
+  },
+  {
+    "id": "1747835053361",
+    "question": "Which quantity has the same dimension as energy?",
+    "options": ["Power", "Work", "Pressure", "Force"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.361Z"
+  },
+  {
+    "id": "1747835053362",
+    "question": "The dimensional formula for pressure is:",
+    "options": ["ML⁻¹T⁻²", "MLT⁻²", "MLT⁻¹", "ML²T⁻³"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.362Z"
+  },
+  {
+    "id": "1747835053363",
+    "question": "Which of the following pairs have the same dimension?",
+    "options": ["Work and Pressure", "Impulse and Momentum", "Velocity and Acceleration", "Work and Power"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.363Z"
+  },
+  {
+    "id": "1747835053364",
+    "question": "What is the dimensional formula of power?",
+    "options": ["ML²T⁻³", "ML²T⁻²", "MLT⁻¹", "ML⁻¹T⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.364Z"
+  },
+  {
+    "id": "1747835053365",
+    "question": "Which of these is not a base unit in SI?",
+    "options": ["Ampere", "Kelvin", "Calorie", "Mole"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.365Z"
+  },
+  {
+    "id": "1747835053366",
+    "question": "The SI unit of electric current is:",
+    "options": ["Ohm", "Volt", "Ampere", "Watt"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.366Z"
+  },
+  {
+    "id": "1747835053367",
+    "question": "1 nanometer equals:",
+    "options": ["10⁻⁶ m", "10⁻⁹ m", "10⁻³ m", "10⁶ m"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.367Z"
+  },
+  {
+    "id": "1747835053368",
+    "question": "How many significant figures are in 0.004500?",
+    "options": ["2", "3", "4", "5"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.368Z"
+  },
+  {
+    "id": "1747835053369",
+    "question": "The instrument best used for small length measurements is:",
+    "options": ["Thermometer", "Meter rule", "Stopwatch", "Vernier caliper"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.369Z"
+  },
+  {
+    "id": "1747835053370",
+    "question": "The SI unit of viscosity is:",
+    "options": ["Pa·s", "N/m²", "N·s/m", "kg/m³"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.370Z"
+  },
+  {
+    "id": "1747835053371",
+    "question": "Pascal's Law states:",
+    "options": [
+      "Pressure is inversely proportional to volume",
+      "Pressure applied to a fluid is transmitted equally",
+      "Fluid density remains constant",
+      "Pressure increases with area"
+    ],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.371Z"
+  },
+  {
+    "id": "1747835053372",
+    "question": "Pressure in a fluid at rest depends on:",
+    "options": ["Temperature and height", "Area and time", "Depth and density", "Speed and height"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.372Z"
+  },
+  {
+    "id": "1747835053373",
+    "question": "The equation of continuity is based on:",
+    "options": ["Newton's Law", "Conservation of Energy", "Bernoulli's Theorem", "Conservation of Mass"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.373Z"
+  },
+  {
+    "id": "1747835053374",
+    "question": "Bernoulli's principle deals with:",
+    "options": ["Rotational energy", "Conservation of momentum", "Conservation of energy", "Conservation of mass"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.374Z"
+  },
+  {
+    "id": "1747835053375",
+    "question": "Which of the following is a vector quantity?",
+    "options": ["Mass", "Distance", "Displacement", "Speed"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.375Z"
+  },
+  {
+    "id": "1747835053376",
+    "question": "Which of the following is a scalar quantity?",
+    "options": ["Velocity", "Force", "Speed", "Acceleration"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.376Z"
+  },
+  {
+    "id": "1747835053377",
+    "question": "Resultant of two perpendicular vectors A and B is:",
+    "options": ["A + B", "A² + B²", "√(A² + B²)", "AB sin θ"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.377Z"
+  },
+  {
+    "id": "1747835053378",
+    "question": "The dot product of two perpendicular vectors is:",
+    "options": ["A·B", "AB", "Zero", "A/B"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.378Z"
+  },
+  {
+    "id": "1747835053379",
+    "question": "A vector is a quantity that has:",
+    "options": ["Only magnitude", "Only direction", "Magnitude and direction", "No unit"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.379Z"
+  },
+  {
+    "id": "1747835053380",
+    "question": "Boyle's law states that:",
+    "options": ["P ∝ T", "P ∝ V", "PV = constant", "V ∝ T"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.380Z"
+  },
+  {
+    "id": "1747835053381",
+    "question": "If the pressure of a gas doubles and temperature is constant, volume becomes:",
+    "options": ["Doubled", "Tripled", "Halved", "Unchanged"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.381Z"
+  },
+  {
+    "id": "1747835053382",
+    "question": "Charles' law states that volume is directly proportional to:",
+    "options": ["Pressure", "Temperature", "Mass", "Density"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.382Z"
+  },
+  {
+    "id": "1747835053383",
+    "question": "The ideal gas equation is:",
+    "options": ["PV = RT", "P = ρgh", "PV = nRT", "P = F/A"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.383Z"
+  },
+  {
+    "id": "1747835053384",
+    "question": "If temperature of a gas increases at constant volume, pressure will:",
+    "options": ["Decrease", "Increase", "Remain constant", "Be zero"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.384Z"
+  },
+  {
+    "id": "1747835053385",
+    "question": "A body moving with uniform velocity has:",
+    "options": ["Uniform acceleration", "Increasing velocity", "Zero acceleration", "Constant speed and direction change"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.385Z"
+  },
+  {
+    "id": "1747835053386",
+    "question": "The area under a velocity-time graph gives:",
+    "options": ["Speed", "Acceleration", "Force", "Displacement"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.386Z"
+  },
+  {
+    "id": "1747835053387",
+    "question": "Which is a vector quantity?",
+    "options": ["Speed", "Time", "Acceleration", "Mass"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.387Z"
+  },
+  {
+    "id": "1747835053388",
+    "question": "A car accelerates from 0 to 30 m/s in 10s. What is its acceleration?",
+    "options": ["3 m/s²", "30 m/s²", "10 m/s²", "0.3 m/s²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.388Z"
+  },
+  {
+    "id": "1747835053389",
+    "question": "When a body reaches the highest point in vertical motion, its acceleration is:",
+    "options": ["0", "-9.8 m/s²", "9.8 m/s² upward", "None of the above"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.389Z"
+  },
+  {
+    "id": "1747835053390",
+    "question": "Work done is zero when:",
+    "options": ["Force is applied", "Displacement is zero", "Mass is zero", "Time is infinite"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.390Z"
+  },
+  {
+    "id": "1747835053391",
+    "question": "SI unit of energy is:",
+    "options": ["Watt", "Calorie", "Joule", "Erg"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.391Z"
+  },
+  {
+    "id": "1747835053392",
+    "question": "Kinetic energy is given by:",
+    "options": ["mv", "mv²", "½mv²", "mgh"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.392Z"
+  },
+  {
+    "id": "1747835053393",
+    "question": "Power is defined as:",
+    "options": ["Energy x time", "Work/time", "Force x velocity", "Mass/acceleration"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.393Z"
+  },
+  {
+    "id": "1747835053394",
+    "question": "If mass is doubled and velocity is also doubled, KE becomes:",
+    "options": ["Twice", "Four times", "Eight times", "Sixteen times"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.394Z"
+  },
+  {
+    "id": "1747835053395",
+    "question": "What is the dimensional formula of momentum?",
+    "options": ["MLT⁻²", "MLT⁻¹", "ML²T⁻¹", "M⁻¹LT"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.395Z"
+  },
+  {
+    "id": "1747835053396",
+    "question": "The SI unit of pressure is:",
+    "options": ["Pascal", "Joule", "Newton", "Watt"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.396Z"
+  },
+  {
+    "id": "1747835053397",
+    "question": "Which one of these is dimensionally equal to impulse?",
+    "options": ["Energy", "Power", "Force", "Momentum"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.397Z"
+  },
+  {
+    "id": "1747835053398",
+    "question": "If the unit of force is N and acceleration is m/s², what is the unit of mass?",
+    "options": ["kg·m/s²", "N·s", "N·m", "kg"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.398Z"
+  },
+  {
+    "id": "1747835053399",
+    "question": "A physical quantity that has dimensions [M⁰L⁰T⁰] is:",
+    "options": ["Force", "Coefficient of friction", "Energy", "Velocity"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.399Z"
+  },
+  {
+    "id": "1747835053400",
+    "question": "A block is submerged in water and displaces 2 kg of water. What is the buoyant force acting on it? (Take g = 10 m/s²)",
+    "options": ["2 N", "20 N", "200 N", "0.2 N"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.400Z"
+  },
+  {
+    "id": "1747835053401",
+    "question": "Fluid pressure at a depth h in a liquid is given by:",
+    "options": ["P = ρgh", "P = mg", "P = ρg/h", "P = h/ρg"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.401Z"
+  },
+  {
+    "id": "1747835053402",
+    "question": "A fluid flows faster through a narrow pipe due to:",
+    "options": ["Pascal's law", "Bernoulli's principle", "Newton's third law", "Archimedes' principle"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.402Z"
+  },
+  {
+    "id": "1747835053403",
+    "question": "A fluid has a density of 1000 kg/m³. What is the pressure 5 m below the surface? (Take g = 10 m/s²)",
+    "options": ["5,000 Pa", "50,000 Pa", "500 Pa", "0 Pa"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.403Z"
+  },
+  {
+    "id": "1747835053404",
+    "question": "Which of the following will sink in water?",
+    "options": ["Object with density 800 kg/m³", "Object with density 1000 kg/m³", "Object with density 1200 kg/m³", "Object with density 500 kg/m³"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.404Z"
+  },
+  {
+    "id": "1747835053405",
+    "question": "If two vectors of equal magnitude act at 90°, the resultant is:",
+    "options": ["Same as either", "Twice the magnitude", "Zero", "√2 times the magnitude"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.405Z"
+  },
+  {
+    "id": "1747835053406",
+    "question": "Which of the following is not a vector?",
+    "options": ["Displacement", "Acceleration", "Mass", "Velocity"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.406Z"
+  },
+  {
+    "id": "1747835053407",
+    "question": "The angle between two perpendicular vectors is:",
+    "options": ["0°", "45°", "90°", "180°"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.407Z"
+  },
+  {
+    "id": "1747835053408",
+    "question": "A man walks 3 km East and then 4 km North. What is his displacement?",
+    "options": ["5 km", "7 km", "1 km", "6 km"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.408Z"
+  },
+  {
+    "id": "1747835053409",
+    "question": "The scalar product of two vectors is maximum when the angle between them is:",
+    "options": ["0°", "45°", "90°", "180°"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.409Z"
+  },
+  {
+    "id": "1747835053410",
+    "question": "A gas has a volume of 4 L at 1 atm. What will be its volume at 2 atm, if temperature is constant?",
+    "options": ["8 L", "2 L", "1 L", "4 L"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.410Z"
+  },
+  {
+    "id": "1747835053411",
+    "question": "Which law states that \"volume is directly proportional to temperature\"?",
+    "options": ["Boyle's law", "Charles' law", "Avogadro's law", "Dalton's law"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.411Z"
+  },
+  {
+    "id": "1747835053412",
+    "question": "For an ideal gas at constant volume, the pressure is directly proportional to:",
+    "options": ["Volume", "Temperature", "Density", "Time"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.412Z"
+  },
+  {
+    "id": "1747835053413",
+    "question": "A gas initially at 300K is heated to 600K at constant pressure. Its volume will:",
+    "options": ["Remain unchanged", "Halve", "Double", "Triple"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.413Z"
+  },
+  {
+    "id": "1747835053414",
+    "question": "If pressure = 2 atm, volume = 5 L and T = 300K, what is n in PV = nRT? (Use R = 0.082)",
+    "options": ["0.4 mol", "0.5 mol", "0.1 mol", "0.3 mol"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.414Z"
+  },
+  {
+    "id": "1747835053415",
+    "question": "A ball is thrown upward with a speed of 20 m/s. How long does it take to reach maximum height? (g = 10 m/s²)",
+    "options": ["1 s", "2 s", "4 s", "5 s"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.415Z"
+  },
+  {
+    "id": "1747835053416",
+    "question": "Displacement is the:",
+    "options": ["Total path length", "Change in position", "Distance covered per unit time", "Speed × time"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.416Z"
+  },
+  {
+    "id": "1747835053417",
+    "question": "A car travels at 60 km/h for 2 hours. What distance does it cover?",
+    "options": ["30 km", "120 km", "90 km", "180 km"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.417Z"
+  },
+  {
+    "id": "1747835053418",
+    "question": "Acceleration of a body falling freely under gravity is:",
+    "options": ["Zero", "9.8 m/s² upward", "9.8 m/s² downward", "Depends on mass"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.418Z"
+  },
+  {
+    "id": "1747835053419",
+    "question": "A body moving in a circle at constant speed has:",
+    "options": ["Constant velocity", "Zero acceleration", "Changing direction", "Uniform acceleration"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.419Z"
+  },
+  {
+    "id": "1747835053420",
+    "question": "A 5 kg mass is lifted 4 m. What is the work done? (g = 10 m/s²)",
+    "options": ["200 J", "20 J", "40 J", "50 J"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.420Z"
+  },
+  {
+    "id": "1747835053421",
+    "question": "Which of the following is true for power?",
+    "options": ["It is energy per unit mass", "It is energy per unit time", "It is energy × time", "It is force × mass"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.421Z"
+  },
+  {
+    "id": "1747835053422",
+    "question": "If work done is 100 J in 20 seconds, power is:",
+    "options": ["0.2 W", "5 W", "50 W", "2 W"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.422Z"
+  },
+  {
+    "id": "1747835053423",
+    "question": "Potential energy of an object is due to its:",
+    "options": ["Motion", "Speed", "Position", "Mass only"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.423Z"
+  },
+  {
+    "id": "1747835053424",
+    "question": "A spring is stretched and stores 50 J. What kind of energy is this?",
+    "options": ["Kinetic", "Nuclear", "Elastic potential", "Chemical"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.424Z"
+  },
+  {
+    "id": "1747835053425",
+    "question": "A car accelerates from rest to 20 m/s in 5 seconds. What is its average velocity?",
+    "options": ["10 m/s", "4 m/s", "5 m/s", "20 m/s"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.425Z"
+  },
+  {
+    "id": "1747835053426",
+    "question": "What is the work done when a force is applied at 90° to the direction of motion?",
+    "options": ["Maximum", "Zero", "Same as force", "Infinite"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.426Z"
+  },
+  {
+    "id": "1747835053427",
+    "question": "The unit of kinematic viscosity is:",
+    "options": ["m²/s", "N·s/m²", "kg/m³", "m/s²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.427Z"
+  },
+  {
+    "id": "1747835053428",
+    "question": "Which of these quantities changes when direction changes but speed remains the same?",
+    "options": ["Mass", "Velocity", "Energy", "Distance"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.428Z"
+  },
+  {
+    "id": "1747835053429",
+    "question": "A quantity that has magnitude but no direction is:",
+    "options": ["Vector", "Scalar", "Displacement", "Force"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.429Z"
   }
 ]
