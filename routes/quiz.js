@@ -121,8 +121,9 @@ router.delete("/quiz/:id", (req, res) => {
 });
 
 // === SAVE QUIZ RESULT ===
+// === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
-  const { regNumber, score, total, department } = req.body;
+  const { regNumber, fullName, score, total, department } = req.body; // Added fullName here
   const db = req.app.locals.db;
 
   if (!regNumber || score == null || total == null) {
@@ -133,6 +134,7 @@ router.post("/results", async (req, res) => {
     const resultId = `${regNumber}_${Date.now()}`;
     await setDoc(doc(db, "Results", resultId), {
       regNumber,
+      fullName: fullName || "Not Provided", // Added fullName here with fallback
       score,
       total,
       department: department || "N/A",
@@ -160,28 +162,27 @@ router.get("/results", async (req, res) => {
 });
 
 // === DOWNLOAD AND CLEAR RESULTS ===
+// === DOWNLOAD AND CLEAR RESULTS ===
 router.get("/results/download-clear", async (req, res) => {
   const db = req.app.locals.db;
 
   try {
-    // 1. Get all results
     const resultsSnapshot = await getDocs(collection(db, "Results"));
     if (resultsSnapshot.empty) {
       return res.status(400).json({ error: "No results to export." });
     }
-    // 2. Convert to CSV
-    const fields = ['regNumber', 'department', 'score', 'total', 'timestamp'];
+
+    // Update fields to include fullName
+    const fields = ['regNumber', 'fullName', 'department', 'score', 'total', 'timestamp'];
     const parser = new Parser({ fields });
     const results = [];
     resultsSnapshot.forEach(doc => results.push(doc.data()));
     const csv = parser.parse(results);
 
-    // 3. Delete all
     const batch = writeBatch(db);
     resultsSnapshot.forEach(doc => batch.delete(doc.ref));
     await batch.commit();
 
-    // 4. Send CSV
     res.header('Content-Type', 'text/csv');
     res.attachment('quiz_results.csv');
     res.send(csv);
