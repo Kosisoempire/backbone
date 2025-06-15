@@ -121,9 +121,8 @@ router.delete("/quiz/:id", (req, res) => {
 });
 
 // === SAVE QUIZ RESULT ===
-// === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
-  const { regNumber, fullName, score, total, department } = req.body; // Added fullName here
+  const { regNumber, fullName, score, total, department, school = "EBSU", year = "2023" } = req.body;
   const db = req.app.locals.db;
 
   if (!regNumber || score == null || total == null) {
@@ -131,17 +130,21 @@ router.post("/results", async (req, res) => {
   }
 
   try {
-    const resultId = `${regNumber}_${Date.now()}`;
-    await setDoc(doc(db, "Results", resultId), {
+    // Create a reference to the nested collection
+    const resultRef = doc(db, "Results", school, year, `${regNumber}_${Date.now()}`);
+    
+    await setDoc(resultRef, {
       regNumber,
-      fullName: fullName || "Not Provided", // Added fullName here with fallback
+      fullName: fullName || "Not Provided",
       score,
       total,
       department: department || "N/A",
       timestamp: serverTimestamp()
     });
-    res.json({ message: "Result saved", resultId });
+    
+    res.json({ message: "Result saved", resultId: resultRef.id });
   } catch (err) {
+    console.error("Error saving result:", err);
     res.status(500).json({ error: "Error saving result", details: err.message });
   }
 });
@@ -149,48 +152,65 @@ router.post("/results", async (req, res) => {
 // === GET ALL RESULTS ===
 router.get("/results", async (req, res) => {
   const db = req.app.locals.db;
+  const { school = "EBSU", year = "2023" } = req.query;
 
   try {
-    const resultsSnapshot = await getDocs(query(collection(db, "Results"),
-      orderBy("timestamp", "desc")));
+    const resultsRef = collection(db, "Results", school, year);
+    const snapshot = await getDocs(query(resultsRef, orderBy("timestamp", "desc")));
+    
     const results = [];
-    resultsSnapshot.forEach(doc => results.push(doc.data()));
+    snapshot.forEach(doc => {
+      results.push({
+        id: doc.id,
+        ...doc.data(),
+        // Convert Firestore timestamp to JS Date
+        timestamp: doc.data().timestamp?.toDate()?.toISOString() || null
+      });
+    });
+    
     res.json(results);
   } catch (err) {
+    console.error("Error fetching results:", err);
     res.status(500).json({ error: "Could not load results", details: err.message });
   }
 });
 
 // === DOWNLOAD AND CLEAR RESULTS ===
-// === DOWNLOAD AND CLEAR RESULTS ===
 router.get("/results/download-clear", async (req, res) => {
   const db = req.app.locals.db;
+  const { school = "EBSU", year = "2023" } = req.query;
 
   try {
-    const resultsSnapshot = await getDocs(collection(db, "Results"));
-    if (resultsSnapshot.empty) {
-      return res.status(400).json({ error: "No results to export." });
+    const resultsRef = collection(db, "Results", school, year);
+    const snapshot = await getDocs(resultsRef);
+    
+    if (snapshot.empty) {
+      return res.status(404).json({ error: "No results to export" });
     }
 
-    // Update fields to include fullName
+    // Prepare CSV data
     const fields = ['regNumber', 'fullName', 'department', 'score', 'total', 'timestamp'];
     const parser = new Parser({ fields });
-    const results = [];
-    resultsSnapshot.forEach(doc => results.push(doc.data()));
+    const results = snapshot.docs.map(doc => ({
+      ...doc.data(),
+      timestamp: doc.data().timestamp?.toDate()?.toISOString() || null
+    }));
+    
     const csv = parser.parse(results);
 
+    // Delete all documents in batch
     const batch = writeBatch(db);
-    resultsSnapshot.forEach(doc => batch.delete(doc.ref));
+    snapshot.docs.forEach(doc => batch.delete(doc.ref));
     await batch.commit();
 
     res.header('Content-Type', 'text/csv');
-    res.attachment('quiz_results.csv');
+    res.attachment(`quiz_results_${school}_${year}.csv`);
     res.send(csv);
   } catch (err) {
-    res.status(500).json({ error: "Failed to export results", details: err.message });
+    console.error("Error during download-clear:", err);
+    res.status(500).json({ error: "Export failed", details: err.message });
   }
 });
-
 router.get("/test-data", async (req, res) => {
   try {
     const testData = {
