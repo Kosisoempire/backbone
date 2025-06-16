@@ -1,555 +1,968 @@
 [
   {
-    "id": "1747834311490",
-    "question": "What is the Unit of Energy ?",
-    "options": ["pascal", "joules", "watts", "newton"],
-    "correctAnswer": 1,
-    "createdAt": "2025-05-21T13:31:51.490Z"
-  },
-  {
-    "id": "1747834716851",
-    "question": "What is the unit of force ?",
-    "options": ["Ampere", "Volts", "Joules", "Newton"],
-    "correctAnswer": 3,
-    "createdAt": "2025-05-21T13:38:36.851Z"
-  },
-  {
-    "id": "1747834762319",
-    "question": "what is the unit of work",
-    "options": ["energy", "joules", "pascal", "watts"],
-    "correctAnswer": 1,
-    "createdAt": "2025-05-21T13:39:22.319Z",
-    "updatedAt": "2025-05-21T13:39:41.314Z"
-  },
-  {
-    "id": "1747834825021",
-    "question": "what is the unit of time ?",
-    "options": ["Second", "Minute", "Hour", "Day"],
-    "correctAnswer": 0,
-    "createdAt": "2025-05-21T13:40:25.021Z"
-  },
-  {
-    "id": "1747834867328",
-    "question": "what is the unit of current ?",
-    "options": ["Ampere", "Watts", "Voltage", "Kilowatt"],
-    "correctAnswer": 0,
-    "createdAt": "2025-05-21T13:41:07.328Z"
-  },
-  {
-    "id": "1747834924721",
-    "question": "what is the unit of mass",
-    "options": ["kilogram", "gram", "mole", "newton"],
-    "correctAnswer": 0,
-    "createdAt": "2025-05-21T13:42:04.721Z"
-  },
-  {
-    "id": "1747834967489",
-    "question": "what is the unit of speed ?",
-    "options": ["m/h", "m/s", "km/h", "km/s"],
-    "correctAnswer": 1,
-    "createdAt": "2025-05-21T13:42:47.489Z"
-  },
-  {
-    "id": "1747835053359",
-    "question": "what is the unit for absolute Temperature ?",
-    "options": ["Degree Celcius", "Kelvin", "Fahrenheit", "energy"],
-    "correctAnswer": 1,
-    "createdAt": "2025-05-21T13:44:13.359Z",
-    "updatedAt": "2025-05-21T13:44:56.747Z"
-  },
-  {
-    "id": "1747835053360",
-    "question": "What is the dimensional formula of force?",
-    "options": ["MLT²", "MLT⁻²", "ML²T⁻²", "M⁻¹L⁻¹T⁻²"],
-    "correctAnswer": 1,
-    "createdAt": "2025-05-21T13:44:13.360Z"
-  },
-  {
-    "id": "1747835053361",
-    "question": "Which quantity has the same dimension as energy?",
-    "options": ["Power", "Work", "Pressure", "Force"],
-    "correctAnswer": 1,
-    "createdAt": "2025-05-21T13:44:13.361Z"
-  },
-  {
-    "id": "1747835053362",
-    "question": "The dimensional formula for pressure is:",
-    "options": ["ML⁻¹T⁻²", "MLT⁻²", "MLT⁻¹", "ML²T⁻³"],
-    "correctAnswer": 0,
-    "createdAt": "2025-05-21T13:44:13.362Z"
-  },
-  {
     "id": "1747835053363",
-    "question": "Which of the following pairs have the same dimension?",
-    "options": ["Work and Pressure", "Impulse and Momentum", "Velocity and Acceleration", "Work and Power"],
-    "correctAnswer": 1,
+    "question": "A car accelerates from 0 to 60 km/h in 5 seconds. What is its acceleration in m/s²?",
+    "options": ["3.33 m/s²", "6.67 m/s²", "12 m/s²", "1.2 m/s²"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.363Z"
   },
   {
     "id": "1747835053364",
-    "question": "What is the dimensional formula of power?",
-    "options": ["ML²T⁻³", "ML²T⁻²", "MLT⁻¹", "ML⁻¹T⁻²"],
-    "correctAnswer": 0,
+    "question": "Which of the following is a vector quantity?",
+    "options": ["Temperature", "Mass", "Velocity", "Energy"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.364Z"
   },
   {
     "id": "1747835053365",
-    "question": "Which of these is not a base unit in SI?",
-    "options": ["Ampere", "Kelvin", "Calorie", "Mole"],
+    "question": "The coefficient of kinetic friction is typically:",
+    "options": ["Greater than the coefficient of static friction", "Equal to the coefficient of static friction", "Less than the coefficient of static friction", "Unrelated to the coefficient of static friction"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.365Z"
   },
   {
     "id": "1747835053366",
-    "question": "The SI unit of electric current is:",
-    "options": ["Ohm", "Volt", "Ampere", "Watt"],
+    "question": "If a force of 10 N acts on a 2 kg mass for 3 seconds, what is the change in velocity?",
+    "options": ["5 m/s", "10 m/s", "15 m/s", "20 m/s"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.366Z"
   },
   {
     "id": "1747835053367",
-    "question": "1 nanometer equals:",
-    "options": ["10⁻⁶ m", "10⁻⁹ m", "10⁻³ m", "10⁶ m"],
+    "question": "The SI unit of kinematic viscosity is:",
+    "options": ["Pa·s", "m²/s", "N·s/m²", "kg/m·s"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.367Z"
   },
   {
     "id": "1747835053368",
-    "question": "How many significant figures are in 0.004500?",
-    "options": ["2", "3", "4", "5"],
-    "correctAnswer": 2,
+    "question": "A 500 W motor runs for 2 hours. How much energy does it consume?",
+    "options": ["1 kWh", "2 kWh", "3.6 MJ", "Both 1 kWh and 3.6 MJ"],
+    "correctAnswer": 3,
     "createdAt": "2025-05-21T13:44:13.368Z"
   },
   {
     "id": "1747835053369",
-    "question": "The instrument best used for small length measurements is:",
-    "options": ["Thermometer", "Meter rule", "Stopwatch", "Vernier caliper"],
-    "correctAnswer": 3,
+    "question": "The dimensional formula for torque is the same as:",
+    "options": ["Force", "Work", "Power", "Angular momentum"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.369Z"
   },
   {
     "id": "1747835053370",
-    "question": "The SI unit of viscosity is:",
-    "options": ["Pa·s", "N/m²", "N·s/m", "kg/m³"],
-    "correctAnswer": 0,
+    "question": "A ball is thrown vertically upward with velocity 20 m/s. How high will it go? (g = 10 m/s²)",
+    "options": ["10 m", "20 m", "30 m", "40 m"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.370Z"
   },
   {
     "id": "1747835053371",
-    "question": "Pascal's Law states:",
-    "options": [
-      "Pressure is inversely proportional to volume",
-      "Pressure applied to a fluid is transmitted equally",
-      "Fluid density remains constant",
-      "Pressure increases with area"
-    ],
-    "correctAnswer": 1,
+    "question": "Which of these represents the correct dimensional formula for power?",
+    "options": ["ML²T⁻³", "MLT⁻²", "ML²T⁻²", "MLT⁻³"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.371Z"
   },
   {
     "id": "1747835053372",
-    "question": "Pressure in a fluid at rest depends on:",
-    "options": ["Temperature and height", "Area and time", "Depth and density", "Speed and height"],
-    "correctAnswer": 2,
+    "question": "A fluid with dynamic viscosity of 0.1 Pa·s and density of 1000 kg/m³ has kinematic viscosity of:",
+    "options": ["10⁻⁴ m²/s", "10⁻³ m²/s", "10⁻² m²/s", "10⁻¹ m²/s"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.372Z"
   },
   {
     "id": "1747835053373",
-    "question": "The equation of continuity is based on:",
-    "options": ["Newton's Law", "Conservation of Energy", "Bernoulli's Theorem", "Conservation of Mass"],
-    "correctAnswer": 3,
+    "question": "If two forces of 3 N and 4 N act at right angles to each other, their resultant is:",
+    "options": ["5 N", "7 N", "1 N", "12 N"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.373Z"
   },
   {
     "id": "1747835053374",
-    "question": "Bernoulli's principle deals with:",
-    "options": ["Rotational energy", "Conservation of momentum", "Conservation of energy", "Conservation of mass"],
+    "question": "A 2 kg object moving at 3 m/s has kinetic energy of:",
+    "options": ["4.5 J", "6 J", "9 J", "18 J"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.374Z"
   },
   {
     "id": "1747835053375",
-    "question": "Which of the following is a vector quantity?",
-    "options": ["Mass", "Distance", "Displacement", "Speed"],
+    "question": "The unit of surface tension can be expressed as:",
+    "options": ["N/m", "J/m²", "Both N/m and J/m²", "kg·m/s²"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.375Z"
   },
   {
     "id": "1747835053376",
-    "question": "Which of the following is a scalar quantity?",
-    "options": ["Velocity", "Force", "Speed", "Acceleration"],
-    "correctAnswer": 2,
+    "question": "A car's speed changes from 20 m/s to 30 m/s while accelerating uniformly over 5 s. The distance traveled is:",
+    "options": ["100 m", "125 m", "150 m", "175 m"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.376Z"
   },
   {
     "id": "1747835053377",
-    "question": "Resultant of two perpendicular vectors A and B is:",
-    "options": ["A + B", "A² + B²", "√(A² + B²)", "AB sin θ"],
-    "correctAnswer": 2,
+    "question": "Which pair has the same dimensions?",
+    "options": ["Work and torque", "Power and force", "Energy and pressure", "Momentum and impulse"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.377Z"
   },
   {
     "id": "1747835053378",
-    "question": "The dot product of two perpendicular vectors is:",
-    "options": ["A·B", "AB", "Zero", "A/B"],
-    "correctAnswer": 2,
+    "question": "A block slides down a 30° incline with constant velocity. The coefficient of kinetic friction is:",
+    "options": ["0.5", "0.577", "0.866", "1.0"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.378Z"
   },
   {
     "id": "1747835053379",
-    "question": "A vector is a quantity that has:",
-    "options": ["Only magnitude", "Only direction", "Magnitude and direction", "No unit"],
-    "correctAnswer": 2,
+    "question": "The dimensional formula for angular velocity is:",
+    "options": ["T⁻¹", "MT⁻¹", "ML²T⁻¹", "MLT⁻²"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.379Z"
   },
   {
     "id": "1747835053380",
-    "question": "Boyle's law states that:",
-    "options": ["P ∝ T", "P ∝ V", "PV = constant", "V ∝ T"],
+    "question": "A pump lifts 100 kg of water to 10 m height in 20 s. Its power output is: (g = 10 m/s²)",
+    "options": ["50 W", "100 W", "500 W", "1000 W"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.380Z"
   },
   {
     "id": "1747835053381",
-    "question": "If the pressure of a gas doubles and temperature is constant, volume becomes:",
-    "options": ["Doubled", "Tripled", "Halved", "Unchanged"],
-    "correctAnswer": 2,
+    "question": "The Reynolds number for pipe flow depends on all EXCEPT:",
+    "options": ["Pipe diameter", "Fluid velocity", "Fluid viscosity", "Pipe length"],
+    "correctAnswer": 3,
     "createdAt": "2025-05-21T13:44:13.381Z"
   },
   {
     "id": "1747835053382",
-    "question": "Charles' law states that volume is directly proportional to:",
-    "options": ["Pressure", "Temperature", "Mass", "Density"],
-    "correctAnswer": 1,
+    "question": "A vector of magnitude 10 makes 60° with the x-axis. Its x-component is:",
+    "options": ["5", "5√3", "10", "10√3"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.382Z"
   },
   {
     "id": "1747835053383",
-    "question": "The ideal gas equation is:",
-    "options": ["PV = RT", "P = ρgh", "PV = nRT", "P = F/A"],
+    "question": "The work done by a conservative force in a closed path is:",
+    "options": ["Always positive", "Always negative", "Zero", "Depends on the path"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.383Z"
   },
   {
     "id": "1747835053384",
-    "question": "If temperature of a gas increases at constant volume, pressure will:",
-    "options": ["Decrease", "Increase", "Remain constant", "Be zero"],
-    "correctAnswer": 1,
+    "question": "Which is NOT an SI base unit?",
+    "options": ["Ampere", "Candela", "Newton", "Kelvin"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.384Z"
   },
   {
     "id": "1747835053385",
-    "question": "A body moving with uniform velocity has:",
-    "options": ["Uniform acceleration", "Increasing velocity", "Zero acceleration", "Constant speed and direction change"],
-    "correctAnswer": 2,
+    "question": "A projectile has maximum range when launched at:",
+    "options": ["30°", "45°", "60°", "Depends on initial speed"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.385Z"
   },
   {
     "id": "1747835053386",
-    "question": "The area under a velocity-time graph gives:",
-    "options": ["Speed", "Acceleration", "Force", "Displacement"],
-    "correctAnswer": 3,
+    "question": "The ratio of SI units to CGS units of dynamic viscosity is:",
+    "options": ["10", "100", "0.1", "0.01"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.386Z"
   },
   {
     "id": "1747835053387",
-    "question": "Which is a vector quantity?",
-    "options": ["Speed", "Time", "Acceleration", "Mass"],
-    "correctAnswer": 2,
+    "question": "A 1000 kg car moving at 10 m/s brakes to stop in 5 s. The average braking power is:",
+    "options": ["5 kW", "10 kW", "20 kW", "50 kW"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.387Z"
   },
   {
     "id": "1747835053388",
-    "question": "A car accelerates from 0 to 30 m/s in 10s. What is its acceleration?",
-    "options": ["3 m/s²", "30 m/s²", "10 m/s²", "0.3 m/s²"],
+    "question": "The dimensional formula for gravitational constant G is:",
+    "options": ["M⁻¹L³T⁻²", "ML²T⁻²", "MLT⁻²", "M⁻¹L⁻¹T⁻²"],
     "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.388Z"
   },
   {
     "id": "1747835053389",
-    "question": "When a body reaches the highest point in vertical motion, its acceleration is:",
-    "options": ["0", "-9.8 m/s²", "9.8 m/s² upward", "None of the above"],
+    "question": "A body falls freely from rest. The distance fallen in the 3rd second is: (g = 10 m/s²)",
+    "options": ["10 m", "25 m", "45 m", "90 m"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.389Z"
   },
   {
     "id": "1747835053390",
-    "question": "Work done is zero when:",
-    "options": ["Force is applied", "Displacement is zero", "Mass is zero", "Time is infinite"],
-    "correctAnswer": 1,
+    "question": "The unit of momentum can be expressed as:",
+    "options": ["N·s", "kg·m/s", "Both N·s and kg·m/s", "J·s"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.390Z"
   },
   {
     "id": "1747835053391",
-    "question": "SI unit of energy is:",
-    "options": ["Watt", "Calorie", "Joule", "Erg"],
+    "question": "A fluid's viscosity increases with temperature if the fluid is:",
+    "options": ["Water", "Air", "Honey", "Mercury"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.391Z"
   },
   {
     "id": "1747835053392",
-    "question": "Kinetic energy is given by:",
-    "options": ["mv", "mv²", "½mv²", "mgh"],
+    "question": "The angle between vectors A = 3i + 4j and B = -4i + 3j is:",
+    "options": ["0°", "45°", "90°", "180°"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.392Z"
   },
   {
     "id": "1747835053393",
-    "question": "Power is defined as:",
-    "options": ["Energy x time", "Work/time", "Force x velocity", "Mass/acceleration"],
+    "question": "A machine gun fires 10 bullets/s, each with mass 10 g at 500 m/s. The average force on the gun is:",
+    "options": ["5 N", "50 N", "500 N", "5000 N"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.393Z"
   },
   {
     "id": "1747835053394",
-    "question": "If mass is doubled and velocity is also doubled, KE becomes:",
-    "options": ["Twice", "Four times", "Eight times", "Sixteen times"],
+    "question": "The dimensional formula for impulse is same as that for:",
+    "options": ["Force", "Work", "Momentum", "Energy"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.394Z"
   },
   {
     "id": "1747835053395",
-    "question": "What is the dimensional formula of momentum?",
-    "options": ["MLT⁻²", "MLT⁻¹", "ML²T⁻¹", "M⁻¹LT"],
-    "correctAnswer": 1,
+    "question": "A 1 kW heater operates for 1 hour. If 50% of energy is lost, how much heat is available?",
+    "options": ["0.5 kWh", "1.8 MJ", "Both 0.5 kWh and 1.8 MJ", "3.6 MJ"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.395Z"
   },
   {
     "id": "1747835053396",
-    "question": "The SI unit of pressure is:",
-    "options": ["Pascal", "Joule", "Newton", "Watt"],
-    "correctAnswer": 0,
+    "question": "The terminal velocity of a falling sphere depends on all EXCEPT:",
+    "options": ["Fluid viscosity", "Sphere density", "Sphere mass", "Gravity"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.396Z"
   },
   {
     "id": "1747835053397",
-    "question": "Which one of these is dimensionally equal to impulse?",
-    "options": ["Energy", "Power", "Force", "Momentum"],
-    "correctAnswer": 3,
+    "question": "A force F = (3i + 4j) N acts through displacement d = (4i - 3j) m. The work done is:",
+    "options": ["0 J", "12 J", "16 J", "25 J"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.397Z"
   },
   {
     "id": "1747835053398",
-    "question": "If the unit of force is N and acceleration is m/s², what is the unit of mass?",
-    "options": ["kg·m/s²", "N·s", "N·m", "kg"],
-    "correctAnswer": 3,
+    "question": "The SI unit of luminous intensity is:",
+    "options": ["Lumen", "Lux", "Candela", "Watt"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.398Z"
   },
   {
     "id": "1747835053399",
-    "question": "A physical quantity that has dimensions [M⁰L⁰T⁰] is:",
-    "options": ["Force", "Coefficient of friction", "Energy", "Velocity"],
+    "question": "A 5 kg object's velocity changes from 2 m/s to 6 m/s. The impulse is:",
+    "options": ["10 N·s", "20 N·s", "30 N·s", "40 N·s"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.399Z"
   },
   {
     "id": "1747835053400",
-    "question": "A block is submerged in water and displaces 2 kg of water. What is the buoyant force acting on it? (Take g = 10 m/s²)",
-    "options": ["2 N", "20 N", "200 N", "0.2 N"],
-    "correctAnswer": 2,
+    "question": "The ratio of magnitudes of acceleration due to gravity (in SI) to gravitational field intensity is:",
+    "options": ["1", "9.8", "1/9.8", "Depends on mass"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.400Z"
   },
   {
     "id": "1747835053401",
-    "question": "Fluid pressure at a depth h in a liquid is given by:",
-    "options": ["P = ρgh", "P = mg", "P = ρg/h", "P = h/ρg"],
-    "correctAnswer": 0,
+    "question": "A 100 m long train crosses a 200 m bridge at 20 m/s. The time taken is:",
+    "options": ["5 s", "10 s", "15 s", "20 s"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.401Z"
   },
   {
     "id": "1747835053402",
-    "question": "A fluid flows faster through a narrow pipe due to:",
-    "options": ["Pascal's law", "Bernoulli's principle", "Newton's third law", "Archimedes' principle"],
+    "question": "The dimensional formula for strain is:",
+    "options": ["ML⁻¹T⁻²", "Dimensionless", "ML²T⁻²", "MLT⁻¹"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.402Z"
   },
   {
     "id": "1747835053403",
-    "question": "A fluid has a density of 1000 kg/m³. What is the pressure 5 m below the surface? (Take g = 10 m/s²)",
-    "options": ["5,000 Pa", "50,000 Pa", "500 Pa", "0 Pa"],
-    "correctAnswer": 1,
+    "question": "A 2 hp motor running for 1 hour consumes energy of about: (1 hp ≈ 750 W)",
+    "options": ["0.5 kWh", "1.5 kWh", "5.4 MJ", "Both 1.5 kWh and 5.4 MJ"],
+    "correctAnswer": 3,
     "createdAt": "2025-05-21T13:44:13.403Z"
   },
   {
     "id": "1747835053404",
-    "question": "Which of the following will sink in water?",
-    "options": ["Object with density 800 kg/m³", "Object with density 1000 kg/m³", "Object with density 1200 kg/m³", "Object with density 500 kg/m³"],
-    "correctAnswer": 2,
+    "question": "The viscous drag force on a sphere depends on all EXCEPT:",
+    "options": ["Fluid viscosity", "Sphere radius", "Terminal velocity", "Sphere mass"],
+    "correctAnswer": 3,
     "createdAt": "2025-05-21T13:44:13.404Z"
   },
   {
     "id": "1747835053405",
-    "question": "If two vectors of equal magnitude act at 90°, the resultant is:",
-    "options": ["Same as either", "Twice the magnitude", "Zero", "√2 times the magnitude"],
-    "correctAnswer": 3,
+    "question": "The dot product of vectors A = (1,1,1) and B = (1,-1,1) is:",
+    "options": ["0", "1", "2", "3"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.405Z"
   },
   {
     "id": "1747835053406",
-    "question": "Which of the following is not a vector?",
-    "options": ["Displacement", "Acceleration", "Mass", "Velocity"],
-    "correctAnswer": 2,
+    "question": "A 60 W bulb operates for 10 hours. The energy consumed is:",
+    "options": ["0.06 kWh", "0.6 kWh", "6 kWh", "60 kWh"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.406Z"
   },
   {
     "id": "1747835053407",
-    "question": "The angle between two perpendicular vectors is:",
-    "options": ["0°", "45°", "90°", "180°"],
-    "correctAnswer": 2,
+    "question": "The dimensional formula for angular momentum is:",
+    "options": ["ML²T⁻¹", "MLT⁻¹", "ML²T⁻²", "ML⁻¹T⁻²"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.407Z"
   },
   {
     "id": "1747835053408",
-    "question": "A man walks 3 km East and then 4 km North. What is his displacement?",
-    "options": ["5 km", "7 km", "1 km", "6 km"],
-    "correctAnswer": 0,
+    "question": "A block slides down an inclined plane at constant speed. The friction coefficient μ satisfies:",
+    "options": ["μ > tanθ", "μ = tanθ", "μ < tanθ", "μ = 0"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.408Z"
   },
   {
     "id": "1747835053409",
-    "question": "The scalar product of two vectors is maximum when the angle between them is:",
-    "options": ["0°", "45°", "90°", "180°"],
-    "correctAnswer": 0,
+    "question": "The Reynolds number is dimensionless because:",
+    "options": ["It's a ratio of forces", "Dimensions cancel out", "It's empirical", "All of the above"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.409Z"
   },
   {
     "id": "1747835053410",
-    "question": "A gas has a volume of 4 L at 1 atm. What will be its volume at 2 atm, if temperature is constant?",
-    "options": ["8 L", "2 L", "1 L", "4 L"],
-    "correctAnswer": 1,
+    "question": "A vector of magnitude 5 is added to a vector of magnitude 3. The maximum possible resultant is:",
+    "options": ["2", "5", "8", "15"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.410Z"
   },
   {
     "id": "1747835053411",
-    "question": "Which law states that \"volume is directly proportional to temperature\"?",
-    "options": ["Boyle's law", "Charles' law", "Avogadro's law", "Dalton's law"],
-    "correctAnswer": 1,
+    "question": "The work done by gravity when a 10 kg object falls 5 m is: (g = 10 m/s²)",
+    "options": ["-500 J", "0 J", "500 J", "50 J"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.411Z"
   },
   {
     "id": "1747835053412",
-    "question": "For an ideal gas at constant volume, the pressure is directly proportional to:",
-    "options": ["Volume", "Temperature", "Density", "Time"],
-    "correctAnswer": 1,
+    "question": "Which is a derived SI unit?",
+    "options": ["Ampere", "Kelvin", "Newton", "Candela"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.412Z"
   },
   {
     "id": "1747835053413",
-    "question": "A gas initially at 300K is heated to 600K at constant pressure. Its volume will:",
-    "options": ["Remain unchanged", "Halve", "Double", "Triple"],
+    "question": "A projectile's horizontal range is maximum when launched at 45°. If speed doubles, range becomes:",
+    "options": ["Same", "Double", "Four times", "Eight times"],
     "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.413Z"
   },
   {
     "id": "1747835053414",
-    "question": "If pressure = 2 atm, volume = 5 L and T = 300K, what is n in PV = nRT? (Use R = 0.082)",
-    "options": ["0.4 mol", "0.5 mol", "0.1 mol", "0.3 mol"],
+    "question": "The ratio of dynamic viscosity (μ) to density (ρ) is called:",
+    "options": ["Surface tension", "Kinematic viscosity", "Reynolds number", "Shear stress"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.414Z"
   },
   {
     "id": "1747835053415",
-    "question": "A ball is thrown upward with a speed of 20 m/s. How long does it take to reach maximum height? (g = 10 m/s²)",
-    "options": ["1 s", "2 s", "4 s", "5 s"],
+    "question": "A 1000 W device operates at 50% efficiency for 2 hours. Useful energy output is:",
+    "options": ["0.5 kWh", "1 kWh", "2 kWh", "3.6 MJ"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.415Z"
   },
   {
     "id": "1747835053416",
-    "question": "Displacement is the:",
-    "options": ["Total path length", "Change in position", "Distance covered per unit time", "Speed × time"],
-    "correctAnswer": 1,
+    "question": "The dimensional formula for surface tension is:",
+    "options": ["MT⁻²", "MLT⁻²", "ML⁻¹T⁻²", "ML²T⁻²"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.416Z"
   },
   {
     "id": "1747835053417",
-    "question": "A car travels at 60 km/h for 2 hours. What distance does it cover?",
-    "options": ["30 km", "120 km", "90 km", "180 km"],
+    "question": "A car rounds a curve at constant speed. Which statement is true?",
+    "options": ["No acceleration", "Acceleration toward center", "Acceleration tangent to path", "Acceleration opposite to motion"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.417Z"
   },
   {
     "id": "1747835053418",
-    "question": "Acceleration of a body falling freely under gravity is:",
-    "options": ["Zero", "9.8 m/s² upward", "9.8 m/s² downward", "Depends on mass"],
-    "correctAnswer": 2,
+    "question": "The SI unit of magnetic flux density is:",
+    "options": ["Weber", "Tesla", "Henry", "Farad"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.418Z"
   },
   {
     "id": "1747835053419",
-    "question": "A body moving in a circle at constant speed has:",
-    "options": ["Constant velocity", "Zero acceleration", "Changing direction", "Uniform acceleration"],
-    "correctAnswer": 2,
+    "question": "A 5 N force acts on a 2 kg object for 10 s. The change in momentum is:",
+    "options": ["25 kg·m/s", "50 kg·m/s", "100 kg·m/s", "250 kg·m/s"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.419Z"
   },
   {
     "id": "1747835053420",
-    "question": "A 5 kg mass is lifted 4 m. What is the work done? (g = 10 m/s²)",
-    "options": ["200 J", "20 J", "40 J", "50 J"],
+    "question": "The dimensional formula for Planck's constant is:",
+    "options": ["ML²T⁻¹", "MLT⁻¹", "ML²T⁻²", "ML⁻¹T⁻²"],
     "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.420Z"
   },
   {
     "id": "1747835053421",
-    "question": "Which of the following is true for power?",
-    "options": ["It is energy per unit mass", "It is energy per unit time", "It is energy × time", "It is force × mass"],
+    "question": "A 10 kg block is pulled at constant velocity with a force of 50 N. The coefficient of friction is:",
+    "options": ["0.2", "0.5", "5", "10"],
     "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.421Z"
   },
   {
     "id": "1747835053422",
-    "question": "If work done is 100 J in 20 seconds, power is:",
-    "options": ["0.2 W", "5 W", "50 W", "2 W"],
-    "correctAnswer": 1,
+    "question": "The unit of dynamic viscosity in SI is:",
+    "options": ["Poise", "Stokes", "Pascal-second", "Newton-meter"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.422Z"
   },
   {
     "id": "1747835053423",
-    "question": "Potential energy of an object is due to its:",
-    "options": ["Motion", "Speed", "Position", "Mass only"],
-    "correctAnswer": 2,
+    "question": "The cross product of two parallel vectors is:",
+    "options": ["1", "0", "Maximum", "Undefined"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.423Z"
   },
   {
     "id": "1747835053424",
-    "question": "A spring is stretched and stores 50 J. What kind of energy is this?",
-    "options": ["Kinetic", "Nuclear", "Elastic potential", "Chemical"],
-    "correctAnswer": 2,
+    "question": "A 60 kg person climbs stairs of height 10 m in 20 s. The power developed is: (g = 10 m/s²)",
+    "options": ["30 W", "300 W", "600 W", "1200 W"],
+    "correctAnswer": 1,
     "createdAt": "2025-05-21T13:44:13.424Z"
   },
   {
     "id": "1747835053425",
-    "question": "A car accelerates from rest to 20 m/s in 5 seconds. What is its average velocity?",
-    "options": ["10 m/s", "4 m/s", "5 m/s", "20 m/s"],
+    "question": "The dimensional formula for frequency is:",
+    "options": ["T⁻¹", "MT⁻¹", "ML²T⁻¹", "MLT⁻²"],
     "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.425Z"
   },
   {
     "id": "1747835053426",
-    "question": "What is the work done when a force is applied at 90° to the direction of motion?",
-    "options": ["Maximum", "Zero", "Same as force", "Infinite"],
-    "correctAnswer": 1,
+    "question": "A stone is thrown horizontally from a cliff. Its vertical acceleration is:",
+    "options": ["Zero", "Increasing", "Decreasing", "Constant"],
+    "correctAnswer": 3,
     "createdAt": "2025-05-21T13:44:13.426Z"
   },
   {
     "id": "1747835053427",
-    "question": "The unit of kinematic viscosity is:",
-    "options": ["m²/s", "N·s/m²", "kg/m³", "m/s²"],
-    "correctAnswer": 0,
+    "question": "The SI unit of electric charge is:",
+    "options": ["Volt", "Ampere", "Coulomb", "Ohm"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.427Z"
   },
   {
     "id": "1747835053428",
-    "question": "Which of these quantities changes when direction changes but speed remains the same?",
-    "options": ["Mass", "Velocity", "Energy", "Distance"],
-    "correctAnswer": 1,
+    "question": "A force of 10 N acts on a 5 kg object at rest for 2 s. The final kinetic energy is:",
+    "options": ["10 J", "20 J", "40 J", "100 J"],
+    "correctAnswer": 2,
     "createdAt": "2025-05-21T13:44:13.428Z"
   },
   {
     "id": "1747835053429",
-    "question": "A quantity that has magnitude but no direction is:",
-    "options": ["Vector", "Scalar", "Displacement", "Force"],
-    "correctAnswer": 1,
+    "question": "The dimensional formula for capacitance is:",
+    "options": ["M⁻¹L⁻²T⁴I²", "ML²T⁻²I⁻¹", "ML²T⁻³I⁻¹", "MLT⁻²I⁻¹"],
+    "correctAnswer": 0,
     "createdAt": "2025-05-21T13:44:13.429Z"
+  },
+  {
+    "id": "1747835053430",
+    "question": "A 2 kg object moving at 4 m/s collides with a stationary 6 kg object. If they stick together, the final speed is:",
+    "options": ["0.5 m/s", "1 m/s", "2 m/s", "4 m/s"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.430Z"
+  },
+  {
+    "id": "1747835053431",
+    "question": "The unit of stress is same as that of:",
+    "options": ["Force", "Energy", "Pressure", "Power"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.431Z"
+  },
+  {
+    "id": "1747835053432",
+    "question": "A vector A = (3,4) has magnitude:",
+    "options": ["5", "7", "12", "25"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.432Z"
+  },
+  {
+    "id": "1747835053433",
+    "question": "A pump lifts 1000 kg of water per minute to 20 m height. Its power is about: (g = 10 m/s²)",
+    "options": ["3.33 kW", "6.67 kW", "13.3 kW", "20 kW"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.433Z"
+  },
+  {
+    "id": "1747835053434",
+    "question": "The dimensional formula for resistance is:",
+    "options": ["ML²T⁻³I⁻²", "MLT⁻²I⁻¹", "ML²T⁻²I⁻¹", "ML²T⁻¹I⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.434Z"
+  },
+  {
+    "id": "1747835053435",
+    "question": "A car's speed increases from 10 m/s to 20 m/s while covering 150 m. The acceleration is:",
+    "options": ["0.5 m/s²", "1 m/s²", "2 m/s²", "5 m/s²"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.435Z"
+  },
+  {
+    "id": "1747835053436",
+    "question": "The SI unit of magnetic flux is:",
+    "options": ["Tesla", "Weber", "Henry", "Farad"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.436Z"
+  },
+  {
+    "id": "1747835053437",
+    "question": "A 10 N force moves an object 5 m in the force's direction. The work done is:",
+    "options": ["2 J", "5 J", "50 J", "500 J"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.437Z"
+  },
+  {
+    "id": "1747835053438",
+    "question": "The dimensional formula for inductance is:",
+    "options": ["ML²T⁻²I⁻²", "MLT⁻²I⁻¹", "ML²T⁻³I⁻¹", "ML²T⁻¹I⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.438Z"
+  },
+  {
+    "id": "1747835053439",
+    "question": "A ball thrown vertically upward returns to the thrower after 6 s. Its initial velocity was: (g = 10 m/s²)",
+    "options": ["10 m/s", "20 m/s", "30 m/s", "60 m/s"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.439Z"
+  },
+  {
+    "id": "1747835053440",
+    "question": "The unit of kinematic viscosity is:",
+    "options": ["m²/s", "N·s/m²", "kg/m·s", "Pa·s"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.440Z"
+  },
+  {
+    "id": "1747835053441",
+    "question": "The scalar product of vectors A = (1,2,3) and B = (3,2,1) is:",
+    "options": ["3", "6", "10", "14"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.441Z"
+  },
+  {
+    "id": "1747835053442",
+    "question": "A 100 W bulb is left on for 10 days. The energy consumed is:",
+    "options": ["24 kWh", "48 kWh", "72 kWh", "96 kWh"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.442Z"
+  },
+  {
+    "id": "1747835053443",
+    "question": "The dimensional formula for electric field intensity is:",
+    "options": ["MLT⁻³I⁻¹", "ML²T⁻³I⁻¹", "MLT⁻²I⁻¹", "ML²T⁻²I⁻¹"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.443Z"
+  },
+  {
+    "id": "1747835053444",
+    "question": "A car accelerates from rest at 2 m/s² for 5 s, then moves at constant velocity. The distance covered in 10 s is:",
+    "options": ["25 m", "50 m", "75 m", "100 m"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.444Z"
+  },
+  {
+    "id": "1747835053445",
+    "question": "The SI unit of radioactivity is:",
+    "options": ["Roentgen", "Becquerel", "Gray", "Sievert"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.445Z"
+  },
+  {
+    "id": "1747835053446",
+    "question": "A 5 kg object is lifted vertically at constant speed through 2 m. The work done against gravity is: (g = 10 m/s²)",
+    "options": ["10 J", "50 J", "100 J", "200 J"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.446Z"
+  },
+  {
+    "id": "1747835053447",
+    "question": "The dimensional formula for Boltzmann constant is:",
+    "options": ["ML²T⁻²K⁻¹", "MLT⁻²K⁻¹", "ML²T⁻¹K⁻¹", "ML⁻¹T⁻²K⁻¹"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.447Z"
+  },
+  {
+    "id": "1747835053448",
+    "question": "A river flows at 3 m/s and a boat moves at 4 m/s relative to water. To cross the river perpendicularly, the boat must head at angle:",
+    "options": ["30° upstream", "37° upstream", "45° upstream", "53° upstream"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.448Z"
+  },
+  {
+    "id": "1747835053449",
+    "question": "The unit of dynamic viscosity in CGS is:",
+    "options": ["Poise", "Stokes", "Pascal", "Newton"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.449Z"
+  },
+  {
+    "id": "1747835053450",
+    "question": "The vector sum of forces 3 N and 4 N acting at 90° is:",
+    "options": ["1 N", "5 N", "7 N", "12 N"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.450Z"
+  },
+  {
+    "id": "1747835053451",
+    "question": "A 1 kW motor runs for 1 hour. If efficiency is 80%, the useful work done is:",
+    "options": ["0.8 kWh", "1 kWh", "2.88 MJ", "Both 0.8 kWh and 2.88 MJ"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.451Z"
+  },
+  {
+    "id": "1747835053452",
+    "question": "The dimensional formula for luminous flux is:",
+    "options": ["J", "cd·sr", "lm", "All of the above"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.452Z"
+  },
+  {
+    "id": "1747835053453",
+    "question": "A stone is dropped from a rising balloon. To a ground observer, the stone's initial acceleration is:",
+    "options": ["Zero", "Upward", "Downward less than g", "Downward equal to g"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.453Z"
+  },
+  {
+    "id": "1747835053454",
+    "question": "The SI unit of catalytic activity is:",
+    "options": ["Becquerel", "Katal", "Sievert", "Gray"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.454Z"
+  },
+  {
+    "id": "1747835053455",
+    "question": "A 2 kg mass moving at 3 m/s collides with a 1 kg mass at rest. If they stick, their final speed is:",
+    "options": ["1 m/s", "2 m/s", "3 m/s", "6 m/s"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.455Z"
+  },
+  {
+    "id": "1747835053456",
+    "question": "The dimensional formula for permittivity of free space is:",
+    "options": ["M⁻¹L⁻³T⁴I²", "MLT⁻²I⁻²", "ML²T⁻²I⁻¹", "ML²T⁻¹I⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.456Z"
+  },
+  {
+    "id": "1747835053457",
+    "question": "A projectile's range is R when launched at angle θ. If launched at (90°-θ), the range becomes:",
+    "options": ["R", "R/2", "2R", "R²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.457Z"
+  },
+  {
+    "id": "1747835053458",
+    "question": "The unit of kinematic viscosity in CGS is:",
+    "options": ["Poise", "Stokes", "Pascal", "Newton"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.458Z"
+  },
+  {
+    "id": "1747835053459",
+    "question": "The cross product of A = (1,0,0) and B = (0,1,0) is:",
+    "options": ["(0,0,0)", "(0,0,1)", "(1,1,0)", "Undefined"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.459Z"
+  },
+  {
+    "id": "1747835053460",
+    "question": "A 60 W bulb is 20% efficient. The energy wasted in 1 hour is:",
+    "options": ["43.2 kJ", "172.8 kJ", "216 kJ", "432 kJ"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.460Z"
+  },
+  {
+    "id": "1747835053461",
+    "question": "The dimensional formula for permeability is:",
+    "options": ["MLT⁻²I⁻²", "ML²T⁻²I⁻¹", "ML⁻¹T⁻²I²", "MLT⁻¹I⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.461Z"
+  },
+  {
+    "id": "1747835053462",
+    "question": "A car moving at 20 m/s brakes to stop in 4 s. The deceleration is:",
+    "options": ["2 m/s²", "5 m/s²", "10 m/s²", "20 m/s²"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.462Z"
+  },
+  {
+    "id": "1747835053463",
+    "question": "The SI unit of absorbed dose is:",
+    "options": ["Becquerel", "Gray", "Sievert", "Roentgen"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.463Z"
+  },
+  {
+    "id": "1747835053464",
+    "question": "A force of 5 N acts on a 10 kg object initially at rest. After 2 s, the power developed is:",
+    "options": ["5 W", "10 W", "20 W", "50 W"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.464Z"
+  },
+  {
+    "id": "1747835053465",
+    "question": "The dimensional formula for electric potential is:",
+    "options": ["ML²T⁻³I⁻¹", "MLT⁻²I⁻¹", "ML²T⁻²I⁻¹", "ML²T⁻¹I⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.465Z"
+  },
+  {
+    "id": "1747835053466",
+    "question": "A ball is projected at 30° with speed 20 m/s. Its horizontal range is about: (g = 10 m/s²)",
+    "options": ["20 m", "20√3 m", "40 m", "80 m"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.466Z"
+  },
+  {
+    "id": "1747835053467",
+    "question": "The ratio of SI to CGS units of kinematic viscosity is:",
+    "options": ["10⁴", "10²", "10⁻²", "10⁻⁴"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.467Z"
+  },
+  {
+    "id": "1747835053468",
+    "question": "The dot product of A = (2,3) and B = (4,-1) is:",
+    "options": ["5", "8", "11", "14"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.468Z"
+  },
+  {
+    "id": "1747835053469",
+    "question": "A 1 hp motor running for 1 hour consumes energy of about: (1 hp ≈ 750 W)",
+    "options": ["0.075 kWh", "0.75 kWh", "2.7 MJ", "Both 0.75 kWh and 2.7 MJ"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.469Z"
+  },
+  {
+    "id": "1747835053470",
+    "question": "The dimensional formula for magnetic flux is:",
+    "options": ["ML²T⁻²I⁻¹", "MLT⁻²I⁻¹", "ML²T⁻¹I⁻²", "ML²T⁻³I⁻¹"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.470Z"
+  },
+  {
+    "id": "1747835053471",
+    "question": "A train accelerates from rest at 1 m/s² for 10 s, then moves at constant velocity. The distance in 20 s is:",
+    "options": ["50 m", "100 m", "150 m", "200 m"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.471Z"
+  },
+  {
+    "id": "1747835053472",
+    "question": "The SI unit of dose equivalent is:",
+    "options": ["Becquerel", "Gray", "Sievert", "Roentgen"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.472Z"
+  },
+  {
+    "id": "1747835053473",
+    "question": "A 500 g object moving at 4 m/s has kinetic energy of:",
+    "options": ["1 J", "2 J", "4 J", "8 J"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.473Z"
+  },
+  {
+    "id": "1747835053474",
+    "question": "The dimensional formula for electric charge is:",
+    "options": ["TI", "ML²T⁻²I⁻¹", "MLT⁻¹I⁻¹", "ML²T⁻³I⁻¹"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.474Z"
+  },
+  {
+    "id": "1747835053475",
+    "question": "A projectile reaches half its maximum height in 2 s. The total time of flight is: (g = 10 m/s²)",
+    "options": ["4 s", "4√2 s", "8 s", "16 s"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.475Z"
+  },
+  {
+    "id": "1747835053476",
+    "question": "The ratio of dynamic viscosity (μ) to kinematic viscosity (ν) is:",
+    "options": ["Density", "1/Density", "Reynolds number", "Velocity gradient"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.476Z"
+  },
+  {
+    "id": "1747835053477",
+    "question": "The cross product of A = (2,0,0) and B = (0,3,0) is:",
+    "options": ["(0,0,0)", "(0,0,6)", "(6,0,0)", "Undefined"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.477Z"
+  },
+  {
+    "id": "1747835053478",
+    "question": "A 100 W bulb operates at 20% efficiency. The heat dissipated in 1 minute is:",
+    "options": ["120 J", "480 J", "2400 J", "4800 J"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.478Z"
+  },
+  {
+    "id": "1747835053479",
+    "question": "The dimensional formula for resistivity is:",
+    "options": ["ML³T⁻³I⁻²", "ML²T⁻³I⁻²", "MLT⁻²I⁻²", "ML²T⁻²I⁻¹"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.479Z"
+  },
+  {
+    "id": "1747835053480",
+    "question": "A car moving at 10 m/s accelerates uniformly to 20 m/s over 50 m. The acceleration is:",
+    "options": ["1 m/s²", "2 m/s²", "3 m/s²", "4 m/s²"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.480Z"
+  },
+  {
+    "id": "1747835053481",
+    "question": "The SI unit of radioactivity (disintegrations per second) is:",
+    "options": ["Curie", "Becquerel", "Roentgen", "Rutherford"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.481Z"
+  },
+  {
+    "id": "1747835053482",
+    "question": "A 2 kg object falls freely from rest for 3 s. Its kinetic energy is then: (g = 10 m/s²)",
+    "options": ["60 J", "90 J", "180 J", "900 J"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.482Z"
+  },
+  {
+    "id": "1747835053483",
+    "question": "The dimensional formula for magnetic field strength is:",
+    "options": ["MT⁻²I⁻¹", "MLT⁻²I⁻¹", "ML²T⁻²I⁻¹", "MLT⁻¹I⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.483Z"
+  },
+  {
+    "id": "1747835053484",
+    "question": "A projectile has time of flight T when launched vertically. If launched at 30°, the time becomes:",
+    "options": ["T/2", "T/√2", "T√3/2", "T"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.484Z"
+  },
+  {
+    "id": "1747835053485",
+    "question": "The unit of surface tension in SI is:",
+    "options": ["N/m", "J/m", "kg/s²", "All of the above"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.485Z"
+  },
+  {
+    "id": "1747835053486",
+    "question": "The vector sum of A = (3,4) and B = (4,-3) is:",
+    "options": ["(5,5)", "(7,1)", "(1,7)", "(12,12)"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.486Z"
+  },
+  {
+    "id": "1747835053487",
+    "question": "A 1.5 kW heater operates for 2 hours. If 30% of heat is lost, the useful energy is:",
+    "options": ["0.9 kWh", "2.1 kWh", "3.6 MJ", "Both 2.1 kWh and 7.56 MJ"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.487Z"
+  },
+  {
+    "id": "1747835053488",
+    "question": "The dimensional formula for intensity of radiation is:",
+    "options": ["MT⁻³", "ML²T⁻³", "ML⁻¹T⁻²", "ML²T⁻²"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.488Z"
+  },
+  {
+    "id": "1747835053489",
+    "question": "A car moving at 30 m/s stops in 6 s. The distance covered is:",
+    "options": ["45 m", "90 m", "180 m", "360 m"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.489Z"
+  },
+  {
+    "id": "1747835053490",
+    "question": "The SI unit of luminous flux is:",
+    "options": ["Lux", "Lumen", "Candela", "Nit"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.490Z"
+  },
+  {
+    "id": "1747835053491",
+    "question": "A 0.5 kg object is thrown vertically with 20 J kinetic energy. The maximum height reached is: (g = 10 m/s²)",
+    "options": ["2 m", "4 m", "10 m", "20 m"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.491Z"
+  },
+  {
+    "id": "1747835053492",
+    "question": "The dimensional formula for molar heat capacity is:",
+    "options": ["ML²T⁻²K⁻¹", "ML²T⁻²K⁻¹mol⁻¹", "MLT⁻²K⁻¹", "ML²T⁻¹K⁻¹"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.492Z"
+  },
+  {
+    "id": "1747835053493",
+    "question": "A projectile's range is maximum when launched at 45°. At what angle will the range be half of maximum?",
+    "options": ["15°", "30°", "60°", "75°"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.493Z"
+  },
+  {
+    "id": "1747835053494",
+    "question": "The unit of dynamic viscosity can also be expressed as:",
+    "options": ["kg/m·s", "N·s/m²", "Pa·s", "All of the above"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.494Z"
+  },
+  {
+    "id": "1747835053495",
+    "question": "The dot product of A = (1,1,0) and B = (1,-1,0) is:",
+    "options": ["0", "1", "2", "√2"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.495Z"
+  },
+  {
+    "id": "1747835053496",
+    "question": "A 2 kW pump lifts 1000 kg of water to 10 m in 1 minute. Its efficiency is: (g = 10 m/s²)",
+    "options": ["25%", "50%", "75%", "83%"],
+    "correctAnswer": 3,
+    "createdAt": "2025-05-21T13:44:13.496Z"
+  },
+  {
+    "id": "1747835053497",
+    "question": "The dimensional formula for thermal conductivity is:",
+    "options": ["MLT⁻³K⁻¹", "ML²T⁻²K⁻¹", "MLT⁻²K⁻¹", "ML²T⁻³K⁻¹"],
+    "correctAnswer": 0,
+    "createdAt": "2025-05-21T13:44:13.497Z"
+  },
+  {
+    "id": "1747835053498",
+    "question": "A car accelerates from 10 m/s to 30 m/s over 100 m. The acceleration is:",
+    "options": ["1 m/s²", "2 m/s²", "4 m/s²", "8 m/s²"],
+    "correctAnswer": 2,
+    "createdAt": "2025-05-21T13:44:13.498Z"
+  },
+  {
+    "id": "1747835053499",
+    "question": "The SI unit of illuminance is:",
+    "options": ["Lumen", "Lux", "Candela", "Nit"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.499Z"
+  },
+  {
+    "id": "1747835053500",
+    "question": "A 1 kg object moving at 2 m/s collides with a stationary 3 kg object. If they stick, the final kinetic energy is:",
+    "options": ["0.25 J", "0.5 J", "1 J", "2 J"],
+    "correctAnswer": 1,
+    "createdAt": "2025-05-21T13:44:13.500Z"
   }
 ]
