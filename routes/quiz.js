@@ -138,15 +138,21 @@ router.post("/results", async (req, res) => {
 
   try {
     const regUpper = regNumber.toUpperCase().trim();
-
-    // Extract year from the reg number (first 4-digit number)
     const yearMatch = regUpper.match(/\d{4}/);
     const year = yearMatch ? yearMatch[0] : "unknown";
 
-    // Use this format to organize under Results/EBSU/{year}/{resultId}
+    // 🔒 Prevent duplicate submission by checking existing entries
+    const yearCollectionRef = collection(db, "Results", "EBSU", year);
+    const duplicateQuery = query(yearCollectionRef, where("regNumber", "==", regUpper));
+    const existing = await getDocs(duplicateQuery);
+
+    if (!existing.empty) {
+      return res.status(400).json({ error: "You have already submitted the quiz." });
+    }
+
     const resultId = `${regUpper}_${Date.now()}`;
 
-    await setDoc(doc(db, "Results", "EBSU", year, resultId), {
+    await setDoc(doc(yearCollectionRef, resultId), {
       regNumber: regUpper,
       fullName: fullName || "Not Provided",
       score,
@@ -160,6 +166,7 @@ router.post("/results", async (req, res) => {
     res.status(500).json({ error: "Error saving result", details: err.message });
   }
 });
+
 
 // === GET ALL RESULTS ===
 router.get("/results", async (req, res) => {
