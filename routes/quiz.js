@@ -140,15 +140,16 @@ router.post("/results", async (req, res) => {
   try {
     const regUpper = regNumber.toUpperCase();
 
-    // 🔍 Query flat Results collection for duplicate
+    // ✅ Search flat "Results" collection for duplicates
     const resultsRef = collection(db, "Results");
-    const duplicateQuery = query(resultsRef, where("regNumber", "==", regUpper));
-    const snapshot = await getDocs(duplicateQuery);
+    const dupQuery = query(resultsRef, where("regNumber", "==", regUpper));
+    const existing = await getDocs(dupQuery);
 
-    if (!snapshot.empty) {
+    if (!existing.empty) {
       return res.status(409).json({ error: "You have already submitted the quiz." });
     }
 
+    // ✅ Create new result
     const resultId = `${regUpper}_${Date.now()}`;
     await setDoc(doc(db, "Results", resultId), {
       regNumber: regUpper,
@@ -160,8 +161,9 @@ router.post("/results", async (req, res) => {
     });
 
     res.status(200).json({ message: "Result saved", resultId });
+
   } catch (err) {
-    console.error("Submission Error:", err.message);
+    console.error("❌ Error saving result:", err.message);
     res.status(500).json({ error: "Error saving result", details: err.message });
   }
 });
