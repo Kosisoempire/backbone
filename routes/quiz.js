@@ -121,7 +121,6 @@ router.delete("/quiz/:id", (req, res) => {
 });
 
 // === SAVE QUIZ RESULT ===
-// === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
   const { regNumber, fullName, score, total, department } = req.body;
   const db = req.app.locals.db;
@@ -131,31 +130,12 @@ router.post("/results", async (req, res) => {
   }
 
   try {
-    // Store exactly as received (no format conversion)
+    // 1. Generate a unique ID
     const resultId = `${regNumber}_${Date.now()}`;
     
-    // Determine year (extract from regNumber or use current year)
-    let year;
-    const yearMatch = regNumber.match(/(^|\/)(\d{4})/); // Matches both formats:
-    // - "ebsu/2023/123" → extracts "2023"
-    // - "2023123" → extracts "2023"
-    year = yearMatch ? yearMatch[2] : new Date().getFullYear().toString();
-
-    // Store in both collections:
-    // 1. Main collection (for easy querying)
+    // 2. Store ONLY in main collection (simplified)
     await setDoc(doc(db, "Results", resultId), {
-      regNumber, // original format
-      fullName: fullName || "Not Provided",
-      score,
-      total,
-      department: department || "N/A",
-      timestamp: serverTimestamp(),
-      year // for filtering
-    });
-
-    // 2. Year-based collection (for organized access)
-    await setDoc(doc(db, "Results", "EBSU", year, resultId), {
-      regNumber,
+      regNumber, // stored exactly as received
       fullName: fullName || "Not Provided",
       score,
       total,
@@ -164,14 +144,14 @@ router.post("/results", async (req, res) => {
     });
 
     res.json({ 
+      success: true,
       message: "Result saved", 
-      resultId,
-      year // return detected year for debugging
+      resultId
     });
   } catch (err) {
-    console.error("Firestore Error:", err);
+    console.error("SUBMISSION ERROR:", err);
     res.status(500).json({ 
-      error: "Error saving result",
+      error: "Failed to save result",
       details: err.message,
       firestoreError: true
     });
