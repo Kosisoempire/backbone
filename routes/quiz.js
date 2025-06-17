@@ -122,7 +122,6 @@ router.delete("/quiz/:id", (req, res) => {
 
 // === SAVE QUIZ RESULT ===
 // === SAVE QUIZ RESULT ===
-const { collection, query, where, getDocs, doc, setDoc, serverTimestamp } = require('firebase/firestore');
 
 router.post("/results", async (req, res) => {
   const { regNumber, fullName, score, total, department } = req.body;
