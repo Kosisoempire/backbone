@@ -139,22 +139,15 @@ router.post("/results", async (req, res) => {
 
   try {
     const regUpper = regNumber.toUpperCase().trim();
+
+    // Extract year from the reg number (first 4-digit number)
     const yearMatch = regUpper.match(/\d{4}/);
     const year = yearMatch ? yearMatch[0] : "unknown";
 
+    // Use this format to organize under Results/EBSU/{year}/{resultId}
     const resultId = regUpper.replace(/\//g, '_');
-    const resultRef = doc(db, "Results", "EBSU", year, resultId);
 
-    const resultSnap = await getDoc(resultRef);
-
-    if (resultSnap.exists()) {
-      return res.status(200).json({ 
-        message: "You have already submitted your result.", 
-        duplicate: true 
-      });
-    }
-
-    await setDoc(resultRef, {
+    await setDoc(doc(db, "Results", "EBSU", year, resultId), {
       regNumber: regUpper,
       fullName: fullName || "Not Provided",
       score,
@@ -163,12 +156,14 @@ router.post("/results", async (req, res) => {
       timestamp: serverTimestamp()
     });
 
-    res.json({ message: "Result saved successfully", resultId, duplicate: false });
+    res.json({ message: "Result saved", resultId });
   } catch (err) {
-    console.error("Submission error:", err); // Log for debugging
     res.status(500).json({ error: "Error saving result", details: err.message });
   }
 });
+
+
+
 
 // === DOWNLOAD AND CLEAR RESULTS ===
 // === DOWNLOAD AND CLEAR RESULTS ===
