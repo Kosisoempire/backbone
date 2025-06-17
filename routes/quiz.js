@@ -122,39 +122,24 @@ router.delete("/quiz/:id", (req, res) => {
 
 // === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
-  const { regNumber, fullName, score, total, department } = req.body;
+  const { regNumber, score, total } = req.body;
   const db = req.app.locals.db;
 
-  if (!regNumber || score == null || total == null) {
-    return res.status(400).json({ error: "Incomplete result data" });
+  if (!regNumber || typeof score !== 'number' || typeof total !== 'number') {
+    return res.status(400).json({ error: "Invalid data" });
   }
 
   try {
-    // 1. Generate a unique ID
-    const resultId = `${regNumber}_${Date.now()}`;
-    
-    // 2. Store ONLY in main collection (simplified)
-    await setDoc(doc(db, "Results", resultId), {
-      regNumber, // stored exactly as received
-      fullName: fullName || "Not Provided",
+    await setDoc(doc(db, "Results", `result_${Date.now()}`), {
+      regNumber, // Store exactly as received
       score,
       total,
-      department: department || "N/A",
       timestamp: serverTimestamp()
     });
-
-    res.json({ 
-      success: true,
-      message: "Result saved", 
-      resultId
-    });
+    res.json({ success: true });
   } catch (err) {
-    console.error("SUBMISSION ERROR:", err);
-    res.status(500).json({ 
-      error: "Failed to save result",
-      details: err.message,
-      firestoreError: true
-    });
+    console.error("Firestore Error:", err);
+    res.status(500).json({ error: "Database write failed" });
   }
 });
 
