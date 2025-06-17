@@ -121,50 +121,60 @@ router.delete("/quiz/:id", (req, res) => {
 });
 
 // === SAVE QUIZ RESULT ===
+// === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
-  const { regNumber, score, total, department } = req.body;
+  const { regNumber, fullName, score, total, department } = req.body;
+  const db = req.app.locals.db;
 
-  // Better validation
-  if (!regNumber || typeof score !== 'number' || typeof total !== 'number') {
-    return res.status(400).json({ 
-      error: "Invalid data",
-      received: { regNumber, score, total }
-    });
+  if (!regNumber || score == null || total == null) {
+    return res.status(400).json({ error: "Incomplete result data" });
   }
 
   try {
-    // Simplified storage - just use main collection first
-    const resultRef = doc(db, "Results", `${regNumber}_${Date.now()}`);
-    await setDoc(resultRef, {
-      regNumber,
+    // Store exactly as received (no format conversion)
+    const resultId = `${regNumber}_${Date.now()}`;
+    
+    // Determine year (extract from regNumber or use current year)
+    let year;
+    const yearMatch = regNumber.match(/(^|\/)(\d{4})/); // Matches both formats:
+    // - "ebsu/2023/123" → extracts "2023"
+    // - "2023123" → extracts "2023"
+    year = yearMatch ? yearMatch[2] : new Date().getFullYear().toString();
+
+    // Store in both collections:
+    // 1. Main collection (for easy querying)
+    await setDoc(doc(db, "Results", resultId), {
+      regNumber, // original format
+      fullName: fullName || "Not Provided",
       score,
       total,
       department: department || "N/A",
-      timestamp: new Date().toISOString(),
-      year: new Date().getFullYear().toString() // Default to current year
+      timestamp: serverTimestamp(),
+      year // for filtering
     });
 
-    res.json({ success: true });
+    // 2. Year-based collection (for organized access)
+    await setDoc(doc(db, "Results", "EBSU", year, resultId), {
+      regNumber,
+      fullName: fullName || "Not Provided",
+      score,
+      total,
+      department: department || "N/A",
+      timestamp: serverTimestamp()
+    });
+
+    res.json({ 
+      message: "Result saved", 
+      resultId,
+      year // return detected year for debugging
+    });
   } catch (err) {
     console.error("Firestore Error:", err);
     res.status(500).json({ 
-      error: "Database error",
-      details: err.message 
+      error: "Error saving result",
+      details: err.message,
+      firestoreError: true
     });
-  }
-});
-
-    // Save to main collection
-    const resultRef = doc(db, "Results", `${regNumber}_${Date.now()}`);
-    await setDoc(resultRef, resultData);
-
-    // Also save to year-based collection
-    const yearRef = doc(db, "Results", "EBSU", year, `${regNumber}_${Date.now()}`);
-    await setDoc(yearRef, resultData);
-
-    res.json({ success: true });
-  } catch (err) {
-    res.status(500).json({ error: "Failed to save result" });
   }
 });
 
