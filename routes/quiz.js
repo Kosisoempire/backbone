@@ -136,18 +136,26 @@ router.post("/results", async (req, res) => {
     return res.status(400).json({ error: "Invalid registration number format" });
   }
 
+  // Extract year from regNumber
+  let year;
+  const regUpper = regNumber.toUpperCase();
+
+  if (regUpper.includes("/")) {
+    const parts = regUpper.split("/");
+    year = parts[1]; // e.g., EBSU/2023/0001 => 2023
+  } else {
+    year = regUpper.slice(0, 4); // e.g., 202312345678 => 2023
+  }
+
+  const yearCollectionRef = collection(db, "Results", "EBSU", year);
+
+  // Check for duplicates
   try {
-    const regUpper = regNumber.toUpperCase().trim();
-    const yearMatch = regUpper.match(/\d{4}/);
-    const year = yearMatch ? yearMatch[0] : "unknown";
-
-    // 🔒 Prevent duplicate submission by checking existing entries
-    const yearCollectionRef = collection(db, "Results", "EBSU", year);
     const duplicateQuery = query(yearCollectionRef, where("regNumber", "==", regUpper));
-    const existing = await getDocs(duplicateQuery);
+    const existingDocs = await getDocs(duplicateQuery);
 
-    if (!existing.empty) {
-      return res.status(400).json({ error: "You have already submitted the quiz." });
+    if (!existingDocs.empty) {
+      return res.status(409).json({ error: "You have already submitted the quiz." });
     }
 
     const resultId = `${regUpper}_${Date.now()}`;
@@ -162,6 +170,7 @@ router.post("/results", async (req, res) => {
     });
 
     res.json({ message: "Result saved", resultId });
+
   } catch (err) {
     res.status(500).json({ error: "Error saving result", details: err.message });
   }
