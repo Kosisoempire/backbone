@@ -122,6 +122,8 @@ router.delete("/quiz/:id", (req, res) => {
 
 // === SAVE QUIZ RESULT ===
 // === SAVE QUIZ RESULT ===
+const { collection, query, where, getDocs, doc, setDoc, serverTimestamp } = require('firebase/firestore');
+
 router.post("/results", async (req, res) => {
   const { regNumber, fullName, score, total, department } = req.body;
   const db = req.app.locals.db;
@@ -137,16 +139,19 @@ router.post("/results", async (req, res) => {
   }
 
   try {
-    const regUpper = regNumber.toUpperCase().trim();
+    const regUpper = regNumber.toUpperCase();
 
-    // Extract year from the reg number (first 4-digit number)
-    const yearMatch = regUpper.match(/\d{4}/);
-    const year = yearMatch ? yearMatch[0] : "unknown";
+    // 🔍 Query flat Results collection for duplicate
+    const resultsRef = collection(db, "Results");
+    const duplicateQuery = query(resultsRef, where("regNumber", "==", regUpper));
+    const snapshot = await getDocs(duplicateQuery);
 
-    // Use this format to organize under Results/EBSU/{year}/{resultId}
+    if (!snapshot.empty) {
+      return res.status(409).json({ error: "You have already submitted the quiz." });
+    }
+
     const resultId = `${regUpper}_${Date.now()}`;
-
-    await setDoc(doc(db, "Results", "EBSU", year, resultId), {
+    await setDoc(doc(db, "Results", resultId), {
       regNumber: regUpper,
       fullName: fullName || "Not Provided",
       score,
@@ -155,8 +160,9 @@ router.post("/results", async (req, res) => {
       timestamp: serverTimestamp()
     });
 
-    res.json({ message: "Result saved", resultId });
+    res.status(200).json({ message: "Result saved", resultId });
   } catch (err) {
+    console.error("Submission Error:", err.message);
     res.status(500).json({ error: "Error saving result", details: err.message });
   }
 });
