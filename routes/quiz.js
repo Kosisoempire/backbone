@@ -136,30 +136,31 @@ router.post("/results", async (req, res) => {
     return res.status(400).json({ error: "Invalid registration number format" });
   }
 
-  // Extract year from regNumber
-  let year;
-  const regUpper = regNumber.toUpperCase();
-
-  if (regUpper.includes("/")) {
-    const parts = regUpper.split("/");
-    year = parts[1]; // e.g., EBSU/2023/0001 => 2023
-  } else {
-    year = regUpper.slice(0, 4); // e.g., 202312345678 => 2023
-  }
-
-  const yearCollectionRef = collection(db, "Results", "EBSU", year);
-
-  // Check for duplicates
   try {
-    const duplicateQuery = query(yearCollectionRef, where("regNumber", "==", regUpper));
-    const existingDocs = await getDocs(duplicateQuery);
+    const regUpper = regNumber.toUpperCase();
 
-    if (!existingDocs.empty) {
+    // Extract year from regNumber
+    let year;
+    if (regUpper.includes("/")) {
+      const parts = regUpper.split("/");
+      year = parts[1]; // from EBSU/2023/0001 => 2023
+    } else {
+      year = regUpper.slice(0, 4); // from 2023123456 => 2023
+    }
+
+    const yearCollectionRef = collection(db, "Results", "EBSU", year);
+
+    // 🔍 Check for duplicates
+    const duplicateQuery = query(yearCollectionRef, where("regNumber", "==", regUpper));
+    const snapshot = await getDocs(duplicateQuery);
+
+    if (!snapshot.empty) {
       return res.status(409).json({ error: "You have already submitted the quiz." });
     }
 
     const resultId = `${regUpper}_${Date.now()}`;
 
+    // ✅ Save the result
     await setDoc(doc(yearCollectionRef, resultId), {
       regNumber: regUpper,
       fullName: fullName || "Not Provided",
@@ -169,13 +170,13 @@ router.post("/results", async (req, res) => {
       timestamp: serverTimestamp()
     });
 
-    res.json({ message: "Result saved", resultId });
+    res.status(200).json({ message: "Result saved", resultId });
 
   } catch (err) {
+    console.error("🔥 ERROR IN /results:", err.message);
     res.status(500).json({ error: "Error saving result", details: err.message });
   }
 });
-
 
 // === GET ALL RESULTS ===
 router.get("/results", async (req, res) => {
