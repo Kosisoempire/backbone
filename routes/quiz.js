@@ -123,33 +123,36 @@ router.delete("/quiz/:id", (req, res) => {
 // === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
   const { regNumber, score, total, department } = req.body;
-  const db = req.app.locals.db;
 
-  if (!regNumber || score == null || total == null) {
-    return res.status(400).json({ error: "Missing required fields" });
+  // Better validation
+  if (!regNumber || typeof score !== 'number' || typeof total !== 'number') {
+    return res.status(400).json({ 
+      error: "Invalid data",
+      received: { regNumber, score, total }
+    });
   }
 
   try {
-    // 1. Use current year as default (e.g., "2024")
-    let year = new Date().getFullYear().toString();
-
-    // 2. Try to extract year from registration number (works for both formats):
-    //    - "ebsu/2023/123" → extracts "2023"
-    //    - "2023123" → extracts "2023"
-    const yearMatch = regNumber.match(/(^|\/)(\d{4})/);
-    if (yearMatch) year = yearMatch[2]; // Use extracted year if found
-
-    // 3. Save to Firestore (two places for easy access):
-    //    - Main collection (all results together)
-    //    - Year-based collection (organized by year)
-    const resultData = {
-      regNumber, // Stored exactly as entered
+    // Simplified storage - just use main collection first
+    const resultRef = doc(db, "Results", `${regNumber}_${Date.now()}`);
+    await setDoc(resultRef, {
+      regNumber,
       score,
       total,
       department: department || "N/A",
-      timestamp: serverTimestamp(),
-      year // Added for easy filtering
-    };
+      timestamp: new Date().toISOString(),
+      year: new Date().getFullYear().toString() // Default to current year
+    });
+
+    res.json({ success: true });
+  } catch (err) {
+    console.error("Firestore Error:", err);
+    res.status(500).json({ 
+      error: "Database error",
+      details: err.message 
+    });
+  }
+});
 
     // Save to main collection
     const resultRef = doc(db, "Results", `${regNumber}_${Date.now()}`);
