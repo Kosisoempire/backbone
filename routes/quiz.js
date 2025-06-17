@@ -121,28 +121,47 @@ router.delete("/quiz/:id", (req, res) => {
 });
 
 // === SAVE QUIZ RESULT ===
-// === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
-  const { regNumber, fullName, score, total, department } = req.body; // Added fullName here
+  const { regNumber, score, total, department } = req.body;
   const db = req.app.locals.db;
 
   if (!regNumber || score == null || total == null) {
-    return res.status(400).json({ error: "Incomplete result data" });
+    return res.status(400).json({ error: "Missing required fields" });
   }
 
   try {
-    const resultId = `${regNumber}_${Date.now()}`;
-    await setDoc(doc(db, "Results", resultId), {
-      regNumber,
-      fullName: fullName || "Not Provided", // Added fullName here with fallback
+    // 1. Use current year as default (e.g., "2024")
+    let year = new Date().getFullYear().toString();
+
+    // 2. Try to extract year from registration number (works for both formats):
+    //    - "ebsu/2023/123" → extracts "2023"
+    //    - "2023123" → extracts "2023"
+    const yearMatch = regNumber.match(/(^|\/)(\d{4})/);
+    if (yearMatch) year = yearMatch[2]; // Use extracted year if found
+
+    // 3. Save to Firestore (two places for easy access):
+    //    - Main collection (all results together)
+    //    - Year-based collection (organized by year)
+    const resultData = {
+      regNumber, // Stored exactly as entered
       score,
       total,
       department: department || "N/A",
-      timestamp: serverTimestamp()
-    });
-    res.json({ message: "Result saved", resultId });
+      timestamp: serverTimestamp(),
+      year // Added for easy filtering
+    };
+
+    // Save to main collection
+    const resultRef = doc(db, "Results", `${regNumber}_${Date.now()}`);
+    await setDoc(resultRef, resultData);
+
+    // Also save to year-based collection
+    const yearRef = doc(db, "Results", "EBSU", year, `${regNumber}_${Date.now()}`);
+    await setDoc(yearRef, resultData);
+
+    res.json({ success: true });
   } catch (err) {
-    res.status(500).json({ error: "Error saving result", details: err.message });
+    res.status(500).json({ error: "Failed to save result" });
   }
 });
 
