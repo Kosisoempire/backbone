@@ -126,9 +126,16 @@ router.post("/results", async (req, res) => {
   const { regNumber, fullName, score, total, department } = req.body; // Added fullName here
   const db = req.app.locals.db;
 
-  if (!regNumber || score == null || total == null) {
-    return res.status(400).json({ error: "Incomplete result data" });
-  }
+  const regNumberPattern = /^([a-zA-Z]{3,}\/\d{4}\/\d+|\d{8,}[a-zA-Z]*)$/;
+
+if (!regNumber || score == null || total == null) {
+  return res.status(400).json({ error: "Incomplete result data" });
+}
+
+if (!regNumberPattern.test(regNumber)) {
+  return res.status(400).json({ error: "Invalid registration number format" });
+}
+
 
   try {
     const resultId = `${regNumber}_${Date.now()}`;
