@@ -8,20 +8,28 @@ const studentsPath = path.join(__dirname, '../data/students.json');
 const resultsPath = path.join(__dirname, '../data/results.json');
 
 router.post('/login', (req, res) => {
-  const { regNumber, department } = req.body;
-
-  if (!regNumber) {
-    return res.status(400).json({ success: false, message: 'Registration number required' });
-  }
-
+  const { regNumber } = req.body;
   const rawData = fs.readFileSync(studentsPath);
   const students = JSON.parse(rawData);
 
-  if (students.includes(regNumber.trim())) {
-    res.json({ success: true, message: 'Login successful' });
-  } else {
-    res.status(401).json({ success: false, message: 'Invalid registration number' });
+  // Case 1: Exact match (original validation)
+  if (students.includes(regNumber)) {
+    return res.json({ success: true });
   }
+
+  // Case 2: Match after removing slashes (new)
+  const normalizedReg = regNumber.replace(/\//g, '');
+  if (students.some(student => student.replace(/\//g, '') === normalizedReg)) {
+    return res.json({ success: true });
+  }
+
+  // Case 3: Match year prefix (e.g., "2024" in "2024123456")
+  const yearPrefix = regNumber.match(/^\d{4}/)?.[0];
+  if (yearPrefix && students.some(student => student.includes(yearPrefix))) {
+    return res.json({ success: true });
+  }
+
+  res.status(401).json({ success: false, message: 'Invalid registration number' });
 });
 
 router.get('/results/:regNumber', async (req, res) => {
