@@ -122,42 +122,44 @@ router.delete("/quiz/:id", (req, res) => {
 
 // === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
-  const { regNumber, score, total } = req.body;
+  const { regNumber, fullName, score, total, department } = req.body;
   const db = req.app.locals.db;
 
-  if (!regNumber || typeof score !== 'number' || typeof total !== 'number') {
-    return res.status(400).json({ error: "Invalid data" });
+  if (!regNumber || score == null || total == null) {
+    return res.status(400).json({ error: "Incomplete result data" });
   }
 
   try {
-    await setDoc(doc(db, "Results", `result_${Date.now()}`), {
+    // Generate a clean document ID
+    const docId = `result_${Date.now()}`;
+    
+    // Extract year from regNumber or use current year
+    const yearMatch = regNumber.match(/(\d{4})/);
+    const year = yearMatch ? yearMatch[1] : new Date().getFullYear().toString();
+
+    await setDoc(doc(db, "Results", docId), {
       regNumber, // Store exactly as received
+      fullName: fullName || "Not Provided",
       score,
       total,
+      department: department || "N/A",
+      year, // For organized querying
       timestamp: serverTimestamp()
     });
-    res.json({ success: true });
+
+    res.json({ 
+      success: true,
+      message: "Result saved",
+      resultId: docId
+    });
   } catch (err) {
     console.error("Firestore Error:", err);
-    res.status(500).json({ error: "Database write failed" });
+    res.status(500).json({ 
+      error: "Error saving result",
+      details: err.message
+    });
   }
 });
-
-// === GET ALL RESULTS ===
-router.get("/results", async (req, res) => {
-  const db = req.app.locals.db;
-
-  try {
-    const resultsSnapshot = await getDocs(query(collection(db, "Results"),
-      orderBy("timestamp", "desc")));
-    const results = [];
-    resultsSnapshot.forEach(doc => results.push(doc.data()));
-    res.json(results);
-  } catch (err) {
-    res.status(500).json({ error: "Could not load results", details: err.message });
-  }
-});
-
 // === DOWNLOAD AND CLEAR RESULTS ===
 // === DOWNLOAD AND CLEAR RESULTS ===
 router.get("/results/download-clear", async (req, res) => {
