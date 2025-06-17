@@ -145,7 +145,7 @@ router.post("/results", async (req, res) => {
     const year = yearMatch ? yearMatch[0] : "unknown";
 
     // Use this format to organize under Results/EBSU/{year}/{resultId}
-    const resultId = `${regUpper}_${Date.now()}`;
+    const resultId = regUpper.replace(/\//g, '_');
 
     await setDoc(doc(db, "Results", "EBSU", year, resultId), {
       regNumber: regUpper,
