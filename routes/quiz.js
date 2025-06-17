@@ -123,30 +123,38 @@ router.delete("/quiz/:id", (req, res) => {
 // === SAVE QUIZ RESULT ===
 // === SAVE QUIZ RESULT ===
 router.post("/results", async (req, res) => {
-  const { regNumber, fullName, score, total, department } = req.body; // Added fullName here
+  const { regNumber, fullName, score, total, department } = req.body;
   const db = req.app.locals.db;
 
   const regNumberPattern = /^([a-zA-Z]{3,}\/\d{4}\/\d+|\d{8,}[a-zA-Z]*)$/;
 
-if (!regNumber || score == null || total == null) {
-  return res.status(400).json({ error: "Incomplete result data" });
-}
+  if (!regNumber || score == null || total == null) {
+    return res.status(400).json({ error: "Incomplete result data" });
+  }
 
-if (!regNumberPattern.test(regNumber)) {
-  return res.status(400).json({ error: "Invalid registration number format" });
-}
-
+  if (!regNumberPattern.test(regNumber)) {
+    return res.status(400).json({ error: "Invalid registration number format" });
+  }
 
   try {
-    const resultId = `${regNumber}_${Date.now()}`;
-    await setDoc(doc(db, "Results", resultId), {
-      regNumber,
-      fullName: fullName || "Not Provided", // Added fullName here with fallback
+    const regUpper = regNumber.toUpperCase().trim();
+
+    // Extract year from the reg number (first 4-digit number)
+    const yearMatch = regUpper.match(/\d{4}/);
+    const year = yearMatch ? yearMatch[0] : "unknown";
+
+    // Use this format to organize under Results/EBSU/{year}/{resultId}
+    const resultId = `${regUpper}_${Date.now()}`;
+
+    await setDoc(doc(db, "Results", "EBSU", year, resultId), {
+      regNumber: regUpper,
+      fullName: fullName || "Not Provided",
       score,
       total,
       department: department || "N/A",
       timestamp: serverTimestamp()
     });
+
     res.json({ message: "Result saved", resultId });
   } catch (err) {
     res.status(500).json({ error: "Error saving result", details: err.message });
