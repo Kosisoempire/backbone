@@ -125,41 +125,49 @@ router.delete("/quiz/:id", (req, res) => {
 
 router.post("/results", async (req, res) => {
   const { regNumber, fullName, score, total, department } = req.body;
-  const db = req.app.locals.db;
+const db = req.app.locals.db;
 
-  const regNumberPattern = /^([a-zA-Z]{3,}\/\d{4}\/\d+|\d{8,}[a-zA-Z]*)$/;
+const regNumberPattern = /^([a-zA-Z]{3,}\/\d{4}\/\d+|\d{8,}[a-zA-Z]*)$/;
 
-  if (!regNumber || score == null || total == null) {
-    return res.status(400).json({ error: "Incomplete result data" });
+if (!regNumber || score == null || total == null) {
+  return res.status(400).json({ error: "Incomplete result data" });
+}
+
+if (!regNumberPattern.test(regNumber)) {
+  return res.status(400).json({ error: "Invalid registration number format" });
+}
+
+try {
+  const regUpper = regNumber.toUpperCase().trim();
+
+  // Extract year
+  const yearMatch = regUpper.match(/\d{4}/);
+  const year = yearMatch ? yearMatch[0] : "unknown";
+
+  // Safe document ID
+  const resultId = regUpper.replace(/\//g, '_');
+
+  const resultRef = doc(db, "Results", "EBSU", year, resultId);
+  const existingResult = await getDoc(resultRef);
+
+  if (existingResult.exists()) {
+    return res.status(409).json({ error: "Result already exists for this reg number." });
   }
 
-  if (!regNumberPattern.test(regNumber)) {
-    return res.status(400).json({ error: "Invalid registration number format" });
-  }
+  await setDoc(resultRef, {
+    regNumber: regUpper,
+    fullName: fullName || "Not Provided",
+    score,
+    total,
+    department: department || "N/A",
+    timestamp: serverTimestamp()
+  });
 
-  try {
-    const regUpper = regNumber.toUpperCase().trim();
+  res.json({ message: "Result saved", resultId });
+} catch (err) {
+  res.status(500).json({ error: "Error saving result", details: err.message });
+}
 
-    // Extract year from the reg number (first 4-digit number)
-    const yearMatch = regUpper.match(/\d{4}/);
-    const year = yearMatch ? yearMatch[0] : "unknown";
-
-    // Use this format to organize under Results/EBSU/{year}/{resultId}
-    const resultId = regUpper.replace(/\//g, '_');
-
-    await setDoc(doc(db, "Results", "EBSU", year, resultId), {
-      regNumber: regUpper,
-      fullName: fullName || "Not Provided",
-      score,
-      total,
-      department: department || "N/A",
-      timestamp: serverTimestamp()
-    });
-
-    res.json({ message: "Result saved", resultId });
-  } catch (err) {
-    res.status(500).json({ error: "Error saving result", details: err.message });
-  }
 });
 
 
